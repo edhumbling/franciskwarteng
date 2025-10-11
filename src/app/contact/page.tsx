@@ -1,105 +1,133 @@
-import Link from "next/link";
-import SectionHeading from "../../components/SectionHeading";
-import HighlightCard from "../../components/HighlightCard";
-
-const channels = [
-  {
-    title: "Direct Email",
-    icon: "✉",
-    value: "kwartengfo@warhawks.ulm.edu",
-    description: "For research collaborations, speaking engagements, or laboratory consulting.",
-    href: "mailto:kwartengfo@warhawks.ulm.edu",
-  },
-  {
-    title: "LinkedIn",
-    icon: "in",
-    value: "linkedin.com/in/franciskwarteng-8711bb1ab",
-    description: "Connect to follow Francis&apos; biomedical projects and professional milestones.",
-    href: "https://www.linkedin.com/in/franciskwarteng-8711bb1ab",
-  },
-];
-
-const collaboration = [
-  {
-    title: "Biomedical Research Partnerships",
-    details: "Collaborate on translational parasitology, protein dynamics, and diagnostic innovation.",
-  },
-  {
-    title: "Clinical Laboratory Optimisation",
-    details: "Design resilient blood bank workflows and quality systems grounded in regulatory excellence.",
-  },
-  {
-    title: "Educational Engagements",
-    details: "Curate workshops and lectures that make complex science accessible and actionable.",
-  },
-  {
-    title: "Thought Leadership",
-    details: "Co-create essays, panels, and publications that illuminate the next frontier of laboratory science.",
-  },
-];
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
-    <div className="space-y-16">
-      <section className="glass-panel rounded-[2.5rem] p-10">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Let&apos;s craft luminous science together"
-          description="Reach out to co-create research, clinical excellence, or educational experiences that leave a lasting impact."
-          align="left"
-        />
-      </section>
+    <div>
+      <div className="amazon-section-header" style={{ marginBottom: "40px" }}>
+        <h1 style={{ fontSize: "32px", marginBottom: "12px" }}>Contact Francis Kwarteng</h1>
+        <p className="text-muted" style={{ fontSize: "14px", maxWidth: "800px" }}>
+          Get in touch for research collaborations, speaking engagements, or laboratory consulting
+        </p>
+      </div>
 
-      <section className="grid gap-6 md:grid-cols-2">
-        {channels.map((channel) => (
-          <div key={channel.title} className="glass-panel rounded-3xl p-8">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl text-[rgba(94,234,212,0.95)]">{channel.icon}</span>
-              <h2 className="text-2xl font-semibold text-white md:text-3xl">{channel.title}</h2>
-            </div>
-            <Link
-              href={channel.href}
-              className="mt-5 block text-lg text-[rgba(94,234,212,0.95)] transition hover:text-[rgba(20,184,166,1)]"
-            >
-              {channel.value}
-            </Link>
-            <p className="mt-3 text-sm text-soft md:text-base">{channel.description}</p>
+      <div className="amazon-grid amazon-grid-2" style={{ marginBottom: "40px" }}>
+        <div className="amazon-card-elevated">
+          <h3 style={{ marginBottom: "16px", display: "flex", alignItems: "center", gap: "12px" }}>
+            <span style={{ fontSize: "24px" }}>✉</span>
+            Email
+          </h3>
+          <Link 
+            href="mailto:kwartengfo@warhawks.ulm.edu"
+            className="text-accent"
+            style={{ fontSize: "16px", display: "block", marginBottom: "12px" }}
+          >
+            kwartengfo@warhawks.ulm.edu
+          </Link>
+          <p className="text-muted" style={{ fontSize: "13px", lineHeight: "1.5" }}>
+            For research collaborations, speaking engagements, or laboratory consulting
+          </p>
+        </div>
+
+        <div className="amazon-card-elevated">
+          <h3 style={{ marginBottom: "16px", display: "flex", alignItems: "center", gap: "12px" }}>
+            <span style={{ fontSize: "24px" }}>in</span>
+            LinkedIn
+          </h3>
+          <Link 
+            href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
+            className="text-accent"
+            style={{ fontSize: "16px", display: "block", marginBottom: "12px" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/franciskwarteng-8711bb1ab
+          </Link>
+          <p className="text-muted" style={{ fontSize: "13px", lineHeight: "1.5" }}>
+            Connect to follow biomedical projects and professional milestones
+          </p>
+        </div>
+      </div>
+
+      <div className="amazon-section">
+        <h2 className="amazon-section-title">Collaboration Opportunities</h2>
+        <div className="amazon-grid amazon-grid-2">
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>
+              Biomedical Research Partnerships
+            </h3>
+            <p className="text-muted" style={{ fontSize: "13px", lineHeight: "1.5" }}>
+              Collaborate on translational parasitology, protein dynamics, and diagnostic innovation
+            </p>
           </div>
-        ))}
-      </section>
 
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Opportunities"
-          title="Areas of collaboration"
-          description="Francis approaches every partnership with glass-like transparency, depth, and polish."
-          align="left"
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          {collaboration.map((item) => (
-            <HighlightCard key={item.title} title={item.title} icon="◆">
-              <p>{item.details}</p>
-            </HighlightCard>
-          ))}
-        </div>
-      </section>
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>
+              Clinical Laboratory Optimization
+            </h3>
+            <p className="text-muted" style={{ fontSize: "13px", lineHeight: "1.5" }}>
+              Design resilient blood bank workflows and quality systems grounded in regulatory excellence
+            </p>
+          </div>
 
-      <section className="glass-panel rounded-3xl p-8">
-        <SectionHeading
-          eyebrow="Presence"
-          title="Based in Bronx, New York"
-          description="Serving institutions globally with a grounding in New York&apos;s medical excellence."
-          align="left"
-        />
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <HighlightCard title="Time Zone" icon="🕒">
-            <p>Eastern Time (ET) · Flexible scheduling for international collaborations</p>
-          </HighlightCard>
-          <HighlightCard title="Primary Institution" icon="🏥" variant="accent">
-            <p>NYU Langone Health · Blood Bank Technologist</p>
-          </HighlightCard>
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>
+              Educational Engagements
+            </h3>
+            <p className="text-muted" style={{ fontSize: "13px", lineHeight: "1.5" }}>
+              Curate workshops and lectures that make complex science accessible and actionable
+            </p>
+          </div>
+
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>
+              Thought Leadership
+            </h3>
+            <p className="text-muted" style={{ fontSize: "13px", lineHeight: "1.5" }}>
+              Co-create essays, panels, and publications illuminating laboratory science frontiers
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <div className="amazon-section">
+        <h2 className="amazon-section-title">Location & Availability</h2>
+        <div className="amazon-grid amazon-grid-2">
+          <div className="amazon-card">
+            <h3 style={{ marginBottom: "12px" }}>Based in Bronx, New York</h3>
+            <p className="text-muted" style={{ fontSize: "13px", marginBottom: "8px" }}>
+              Serving institutions globally with a grounding in New York&apos;s medical excellence
+            </p>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              Time Zone: Eastern Time (ET)
+            </p>
+          </div>
+
+          <div className="amazon-card">
+            <h3 style={{ marginBottom: "12px" }}>Primary Institution</h3>
+            <p className="text-accent" style={{ fontSize: "14px", marginBottom: "8px" }}>
+              NYU Langone Health
+            </p>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              Blood Bank Technologist
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="amazon-card-elevated" style={{ textAlign: "center", padding: "40px" }}>
+        <h2 style={{ marginBottom: "12px" }}>Ready to Connect?</h2>
+        <p className="text-muted" style={{ marginBottom: "24px", fontSize: "14px" }}>
+          Reach out to co-create research, clinical excellence, or educational experiences
+        </p>
+        <div style={{ display: "flex", gap: "12px", justifyContent: "center" }}>
+          <Link href="mailto:kwartengfo@warhawks.ulm.edu" className="amazon-button-primary amazon-button">
+            Send Email
+          </Link>
+          <Link href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab" className="amazon-button" target="_blank" rel="noopener noreferrer">
+            Connect on LinkedIn
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

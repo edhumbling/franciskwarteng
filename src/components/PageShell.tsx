@@ -4,12 +4,11 @@ import Footer from "./Footer";
 
 export default function PageShell({ children }: { children: ReactNode }) {
   return (
-    <div className="relative min-h-screen">
-      <div className="grid-overlay" aria-hidden />
-      <div className="blur-blob" data-position="top" aria-hidden />
-      <div className="blur-blob" data-position="bottom" aria-hidden />
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <NavigationBar />
-      <main className="main-container page-padding relative z-10">{children}</main>
+      <main className="amazon-container" style={{ flex: 1, paddingTop: "40px", paddingBottom: "40px" }}>
+        {children}
+      </main>
       <Footer />
     </div>
   );

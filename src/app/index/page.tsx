@@ -1,124 +1,112 @@
-import SectionHeading from "../../components/SectionHeading";
-import HighlightCard from "../../components/HighlightCard";
-
-const pages = [
-  {
-    title: "Home",
-    description: "Premium overview of Francis&apos; mission, impact, and current initiatives.",
-    href: "/",
-    sections: ["Impact Snapshot", "Expertise", "Collaboration"],
-  },
-  {
-    title: "About",
-    description: "Biography, philosophy, experience timeline, certifications, and education.",
-    href: "/about",
-    sections: ["Philosophy", "Experience", "Credentials"],
-  },
-  {
-    title: "Projects",
-    description: "In-depth look at ongoing research and laboratory system innovations.",
-    href: "/projects",
-    sections: ["Pipeline", "Methodology"],
-  },
-  {
-    title: "Essays",
-    description: "Emerging thought leadership bridging science, design, and education.",
-    href: "/essays",
-    sections: ["Forthcoming Essays", "Newsletter"],
-  },
-  {
-    title: "Contact",
-    description: "Collaboration pathways, communication channels, and regional availability.",
-    href: "/contact",
-    sections: ["Opportunities", "Presence"],
-  },
-  {
-    title: "Site Map",
-    description: "Structured navigation map for the entire experience ecosystem.",
-    href: "/sitemap",
-    sections: ["Site Structure", "Quick Access"],
-  },
-];
+import Link from 'next/link';
 
 export default function IndexPage() {
-  return (
-    <div className="space-y-16">
-      <section className="glass-panel rounded-[2.5rem] p-10">
-        <SectionHeading
-          eyebrow="Index"
-          title="Navigate the glass experience"
-          description="This index acts as your illuminated guide, revealing every page, section, and the purpose it serves."
-          align="left"
-        />
-        <p className="mt-6 text-sm text-soft md:text-base">
-          Whether you&apos;re here to understand Francis&apos; laboratory philosophy, dive into active research, or connect directly, the index ensures you never lose orientation.
-        </p>
-      </section>
+  const pages = [
+    {
+      title: "Home",
+      description: "Overview of Francis's mission, impact, and current initiatives",
+      href: "/",
+      sections: ["Hero", "Stats", "Current Position", "Research Focus"],
+    },
+    {
+      title: "About",
+      description: "Biography, philosophy, experience timeline, and credentials",
+      href: "/about",
+      sections: ["Summary", "Experience", "Education", "Certifications"],
+    },
+    {
+      title: "Projects",
+      description: "In-depth look at ongoing research and laboratory innovations",
+      href: "/projects",
+      sections: ["Current Research", "Past Research", "Methodologies"],
+    },
+    {
+      title: "Essays",
+      description: "Thought leadership bridging science, design, and education",
+      href: "/essays",
+      sections: ["Forthcoming Essays", "Newsletter Signup"],
+    },
+    {
+      title: "Contact",
+      description: "Collaboration pathways and communication channels",
+      href: "/contact",
+      sections: ["Email", "LinkedIn", "Opportunities", "Location"],
+    },
+  ];
 
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Pages"
-          title="Core experiences"
-          description="Each page is intentionally crafted to feel immersive, precise, and aligned with the dark glass aesthetic."
-          align="left"
-        />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  return (
+    <div>
+      <div className="amazon-section-header" style={{ marginBottom: "40px" }}>
+        <h1 style={{ fontSize: "32px", marginBottom: "12px" }}>Website Index</h1>
+        <p className="text-muted" style={{ fontSize: "14px", maxWidth: "800px" }}>
+          Complete navigation and overview of all website sections for Francis Kwarteng
+        </p>
+      </div>
+
+      <div className="amazon-section">
+        <h2 className="amazon-section-title">Main Pages</h2>
+        <div className="amazon-grid amazon-grid-2">
           {pages.map((page) => (
-            <div key={page.title} className="glass-panel rounded-3xl p-8">
-              <div className="flex items-center justify-between gap-4">
-                <h2 className="text-2xl font-semibold text-white">{page.title}</h2>
-                <span className="tag-pill text-[0.68rem]">Primary</span>
+            <div key={page.title} className="amazon-card">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "12px" }}>
+                <h3>{page.title}</h3>
+                <span className="amazon-badge">Primary</span>
               </div>
-              <p className="mt-4 text-sm text-soft md:text-base">{page.description}</p>
-              <div className="mt-6">
-                <p className="text-xs uppercase tracking-[0.28em] text-[rgba(148,163,184,0.78)]">Highlights</p>
-                <ul className="mt-2 space-y-2 text-sm text-soft">
+              <p className="text-muted" style={{ fontSize: "13px", marginBottom: "16px", lineHeight: "1.5" }}>
+                {page.description}
+              </p>
+              <div style={{ marginBottom: "16px" }}>
+                <p style={{ fontSize: "11px", color: "var(--amazon-text-muted)", marginBottom: "8px", textTransform: "uppercase" }}>Highlights</p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                   {page.sections.map((section) => (
-                    <li key={section} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[rgba(94,234,212,0.8)]" aria-hidden />
-                      <span>{section}</span>
-                    </li>
+                    <span key={section} className="amazon-badge" style={{ fontSize: "10px" }}>
+                      {section}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
-              <a
-                className="mt-6 inline-block text-sm text-[rgba(94,234,212,0.95)] transition hover:text-[rgba(20,184,166,1)]"
-                href={page.href}
-              >
+              <Link href={page.href} className="amazon-button">
                 Visit Page →
-              </a>
+              </Link>
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Resources"
-          title="Extended references"
-          description="Supporting files curated for search engines, large language models, and collaborators." align="left"
-        />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <HighlightCard title="Sitemap" icon="◆">
-            <p>XML blueprint of the experience for search engines and structured navigation.</p>
-            <a className="mt-4 inline-block text-sm text-[rgba(94,234,212,0.95)]" href="/sitemap.xml">
+      <div className="amazon-section">
+        <h2 className="amazon-section-title">Resources</h2>
+        <div className="amazon-grid amazon-grid-3">
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>Sitemap</h3>
+            <p className="text-muted" style={{ fontSize: "13px", marginBottom: "12px" }}>
+              XML blueprint for search engines and structured navigation
+            </p>
+            <Link href="/sitemap.xml" className="text-accent" style={{ fontSize: "13px" }}>
               Open sitemap.xml →
-            </a>
-          </HighlightCard>
-          <HighlightCard title="LLM Overview" icon="✶" variant="accent">
-            <p>Human-readable synopsis to help AI systems contextualise Francis&apos; expertise.</p>
-            <a className="mt-4 inline-block text-sm text-[rgba(94,234,212,0.95)]" href="/llm.txt">
+            </Link>
+          </div>
+
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>LLM Overview</h3>
+            <p className="text-muted" style={{ fontSize: "13px", marginBottom: "12px" }}>
+              Human-readable synopsis for AI systems
+            </p>
+            <Link href="/llm.txt" className="text-accent" style={{ fontSize: "13px" }}>
               Open llm.txt →
-            </a>
-          </HighlightCard>
-          <HighlightCard title="AI Metadata" icon="⚙">
-            <p>Machine-readable JSON capturing credentials, research focus, and structure.</p>
-            <a className="mt-4 inline-block text-sm text-[rgba(94,234,212,0.95)]" href="/ai-metadata.json">
+            </Link>
+          </div>
+
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "12px" }}>AI Metadata</h3>
+            <p className="text-muted" style={{ fontSize: "13px", marginBottom: "12px" }}>
+              Machine-readable JSON capturing credentials and structure
+            </p>
+            <Link href="/ai-metadata.json" className="text-accent" style={{ fontSize: "13px" }}>
               Open ai-metadata.json →
-            </a>
-          </HighlightCard>
+            </Link>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

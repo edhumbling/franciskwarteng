@@ -1,186 +1,180 @@
-import SectionHeading from "../../components/SectionHeading";
-import HighlightCard from "../../components/HighlightCard";
-import StatisticCluster from "../../components/StatisticCluster";
-import ExperienceTimeline from "../../components/ExperienceTimeline";
-
-const timeline = [
-  {
-    organisation: "NYU Langone Health",
-    role: "Blood Bank Technologist",
-    duration: "Oct 2024 – Present",
-    location: "United States",
-    highlights: [
-      "Safeguarding transfusion services with rigorous cross-matching and antibody profiling",
-      "Orchestrating advanced equipment operations and preventive maintenance",
-      "Driving quality assurance to uphold regulatory benchmarks",
-      "Navigating critical troubleshooting to deliver timely, dependable diagnostics",
-    ],
-  },
-  {
-    organisation: "Westchester Medical Center",
-    role: "Medical Laboratory Scientist II",
-    duration: "Jan 2024 – Jul 2024",
-    location: "Westchester County, New York",
-    highlights: [
-      "Delivered ABO/RH, DAT, IAT, and antibody identification with gel and tube methodologies",
-      "Issued compatible blood products, enabling life-sustaining interventions",
-      "Managed Ortho Vision Swift Analyser operations and preventive QC",
-      "Performed batch antigen screening and complex transfusion reaction workups",
-    ],
-  },
-  {
-    organisation: "UAMS - University of Arkansas for Medical Sciences",
-    role: "Medical Laboratory Scientist",
-    duration: "Jun 2023 – Dec 2023",
-    highlights: [
-      "Executed precise diagnostics across chemistry, hematology, and serology",
-      "Maintained stringent quality controls to deliver reliable laboratory data",
-    ],
-  },
-  {
-    organisation: "University of Louisiana Monroe",
-    role: "Graduate Teaching & Research Assistant",
-    duration: "Jan 2021 – May 2023",
-    location: "Monroe, Louisiana",
-    highlights: [
-      "Demonstrated GleIF4E2 interplay with GleIF2B, revealing novel molecular interactions",
-      "Optimised affinity purification workflows for GST and His-tag proteins",
-      "Designed assessments and guided cohorts in anatomy and physiology",
-    ],
-  },
-  {
-    organisation: "University of Cape Coast",
-    role: "Research & Teaching Assistant",
-    duration: "Sep 2019 – Sep 2020",
-    location: "Cape Coast, Ghana",
-    highlights: [
-      "Coordinated microbiology practicals and undergraduate research initiatives",
-      "Bridged gaps between theoretical instruction and clinical application",
-    ],
-  },
-];
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="space-y-16">
-      <section className="glass-panel overflow-hidden rounded-[2.5rem] p-10">
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.6fr]">
-          <div className="space-y-6">
-            <span className="tag-pill w-max">About Francis</span>
-            <h1 className="text-4xl font-semibold text-white md:text-5xl">
-              Architecting precision diagnostics and translational breakthroughs.
-            </h1>
-            <p className="text-soft md:text-lg">
-              Francis Kwarteng operates at the intersection of molecular parasitology, advanced laboratory science, and clinical diagnostics. With a relentless focus on fidelity and empathy, he designs repeatable systems that protect patients, empower clinicians, and decode complex biological behaviours.
-            </p>
-            <StatisticCluster
-              items={[
-                { label: 'Clinical disciplines mastered', value: '4', detail: 'Blood bank, chemistry, hematology, serology' },
-                { label: 'Educational reach', value: '200+', detail: 'Students mentored across anatomy, physiology, and lab science' },
-                { label: 'Protein interactions elucidated', value: '3', detail: 'GleIF4E2 / GleIF2B molecular discoveries' },
-              ]}
-            />
+    <div>
+      {/* Header */}
+      <div className="amazon-card-elevated" style={{ marginBottom: "40px", padding: "40px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "32px", alignItems: "start" }}>
+          <div style={{ position: "relative", width: "200px", height: "200px", borderRadius: "8px", overflow: "hidden" }}>
+            <Image src="/photo.jpeg" alt="Francis Kwarteng" fill className="object-cover" />
           </div>
-          <div className="glass-panel rounded-3xl p-8" data-variant="accent">
-            <SectionHeading
-              align="left"
-              eyebrow="Professional Focus"
-              title="Biomedical scientist, educator, and systems architect."
-              description="Francis blends dark glass aesthetics, intuitive workflows, and scientific clarity to deliver experiences that feel as polished as they are powerful."
-            />
-            <div className="mt-6 space-y-3 text-sm text-soft">
-              <p>
-                • Steering laboratory excellence at NYU Langone Health with unwavering integrity
-              </p>
-              <p>
-                • Translating parasitic molecular choreography into targeted medical opportunities
-              </p>
-              <p>
-                • Mentoring future scientists to think critically, act decisively, and serve humanity
-              </p>
+          <div>
+            <div className="amazon-badge" style={{ marginBottom: "12px" }}>Biomedical Scientist</div>
+            <h1 style={{ fontSize: "32px", marginBottom: "12px" }}>Francis Kwarteng</h1>
+            <p className="text-secondary" style={{ fontSize: "16px", marginBottom: "16px" }}>
+              BS MLS (ASCPi), MS | NYS Licensed Clinical Laboratory Technologist
+            </p>
+            <p className="text-muted" style={{ fontSize: "14px", lineHeight: "1.6" }}>
+              Biomedical Scientist operating at the intersection of molecular parasitology, advanced laboratory science, and clinical diagnostics. Focused on precision diagnostics and translational breakthroughs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Summary */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Professional Summary</h2>
+        </div>
+        <div className="amazon-card">
+          <p className="text-secondary" style={{ fontSize: "14px", marginBottom: "16px", lineHeight: "1.6" }}>
+            Highly motivated to make the world a better place through disease elimination and control. Hard-working, diligent and results-oriented individual with extensive experience in medical laboratory science and biomedical research.
+          </p>
+          <p className="text-secondary" style={{ fontSize: "14px", lineHeight: "1.6" }}>
+            My current project involves the use of affinity chromatography pull-down assay to characterize the protein-protein interaction in translation initiation of the parasite Giardia lamblia. By understanding the molecular mechanism of translation initiation of the parasite, I may find a drug target selectively toxic to the parasite.
+          </p>
+        </div>
+      </div>
+
+      {/* Experience */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Professional Experience</h2>
+        </div>
+        <div className="amazon-timeline">
+          <div className="amazon-timeline-item">
+            <div className="amazon-card">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "12px" }}>
+                <div>
+                  <h3>NYU Langone Health</h3>
+                  <p className="text-accent" style={{ fontSize: "14px" }}>Blood Bank Technologist</p>
+                </div>
+                <span className="amazon-badge">Oct 2024 - Present</span>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0 }}>
+                <li className="amazon-list-bullet">Skilled in blood typing, cross-matching, and antibody screening</li>
+                <li className="amazon-list-bullet">Operating advanced laboratory equipment</li>
+                <li className="amazon-list-bullet">Ensuring compliance with regulatory standards</li>
+                <li className="amazon-list-bullet">Troubleshooting technical issues</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="amazon-timeline-item">
+            <div className="amazon-card">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "12px" }}>
+                <div>
+                  <h3>Westchester Medical Center</h3>
+                  <p className="text-accent" style={{ fontSize: "14px" }}>Medical Laboratory Scientist II</p>
+                </div>
+                <span className="amazon-badge">Jan 2024 - Jul 2024</span>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0 }}>
+                <li className="amazon-list-bullet">Performed ABO/RH, DAT, IAT and antibody identification</li>
+                <li className="amazon-list-bullet">Issued compatible blood products</li>
+                <li className="amazon-list-bullet">Operated Ortho Vision Swift Analyzer</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="amazon-timeline-item">
+            <div className="amazon-card">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "12px" }}>
+                <div>
+                  <h3>University of Louisiana Monroe</h3>
+                  <p className="text-accent" style={{ fontSize: "14px" }}>Graduate Research Assistant</p>
+                </div>
+                <span className="amazon-badge">Jan 2021 - May 2023</span>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0 }}>
+                <li className="amazon-list-bullet">Demonstrated GleIF4E2 interacts with GleIF2B</li>
+                <li className="amazon-list-bullet">Identified amino residues required for binding</li>
+                <li className="amazon-list-bullet">Optimized affinity purification protocols</li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Philosophy"
-          title="Why glass?"
-          description="Glass embodies transparency, refraction, and protection—the same qualities Francis instils in every clinical decision, experiment, and collaboration."
-          align="left"
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          <HighlightCard title="Clarity of Purpose" icon="✶">
-            <p>
-              Every protocol is rooted in calm precision. Francis cultivates understanding—not just results—ensuring teams align around shared purpose and hard evidence.
-            </p>
-          </HighlightCard>
-          <HighlightCard title="Depth with Empathy" icon="❤">
-            <p>
-              From bench to bedside, decisions are human-centric. Francis designs experiments and systems that protect dignity while pursuing groundbreaking outcomes.
-            </p>
-          </HighlightCard>
-          <HighlightCard title="Resilient Innovation" icon="⚡">
-            <p>
-              Facing complex biological puzzles, he iterates with intention, refining workflows that withstand scrutiny and adapt gracefully to emerging challenges.
-            </p>
-          </HighlightCard>
+      {/* Education */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Education</h2>
         </div>
-      </section>
-
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Experience"
-          title="Trail of precision"
-          description="A disciplined journey across continents and disciplines, delivering laboratory stability while decoding molecular frontiers."
-          align="left"
-        />
-        <ExperienceTimeline items={timeline} />
-      </section>
-
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Academic Foundation"
-          title="Education"
-          description="Structured academia forged a mindset that balances theoretical mastery with hands-on scientific craftsmanship."
-          align="left"
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          <HighlightCard title="Master of Science (MS), Biology" icon="🎓" variant="accent">
-            <p>University of Louisiana at Monroe · 2020 – 2023</p>
-            <p className="mt-3 text-sm text-soft">
-              Expanded molecular research repertoire, refined translational strategies, and mentored cohorts in anatomy and physiology.
+        <div className="amazon-grid amazon-grid-2">
+          <div className="amazon-card">
+            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+              <h3>Master of Science (MS)</h3>
+              <span className="text-muted" style={{ fontSize: "13px" }}>2020 - 2023</span>
+            </div>
+            <p className="text-accent" style={{ fontSize: "14px", marginBottom: "8px" }}>
+              Biology/Biological Sciences
             </p>
-          </HighlightCard>
-          <HighlightCard title="Bachelor of Science (BS), Medical Laboratory Science" icon="🎓">
-            <p>University of Cape Coast · 2015 – 2019</p>
-            <p className="mt-3 text-sm text-soft">
-              Established foundations in diagnostics, microbial ecosystems, and the critical ethics of laboratory operation.
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              University of Louisiana at Monroe
             </p>
-          </HighlightCard>
+          </div>
+          <div className="amazon-card">
+            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
+              <h3>Bachelor of Science (BS)</h3>
+              <span className="text-muted" style={{ fontSize: "13px" }}>2015 - 2019</span>
+            </div>
+            <p className="text-accent" style={{ fontSize: "14px", marginBottom: "8px" }}>
+              Medical Laboratory Science
+            </p>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              University of Cape Coast
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Certifications"
-          title="Credentials"
-          description="Rigorous qualifications ensure every decision stands on validated expertise."
-          align="left"
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          <HighlightCard title="BS MLS (ASCPi)" icon="✔">
-            <p>International credential affirming advanced proficiency in medical laboratory science.</p>
-          </HighlightCard>
-          <HighlightCard title="Clinical Laboratory Scientist (092)" icon="✔" variant="accent">
-            <p>Authorised to lead complex diagnostic environments with confidence and compliance.</p>
-          </HighlightCard>
-          <HighlightCard title="NYS Licensed Clinical Laboratory Technologist" icon="✔">
-            <p>Accredited to practise across New York, delivering safe and regulated patient care.</p>
-          </HighlightCard>
+      {/* Certifications */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Certifications & Credentials</h2>
         </div>
-      </section>
+        <div className="amazon-grid amazon-grid-3">
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "8px" }}>BS MLS (ASCPi)</h3>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              International Medical Laboratory Science credential
+            </p>
+          </div>
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "8px" }}>Clinical Laboratory Scientist</h3>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              License #092
+            </p>
+          </div>
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "8px" }}>NYS Licensed CLT</h3>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              New York State Clinical Laboratory Technologist
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Skills */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Top Skills</h2>
+        </div>
+        <div className="amazon-card">
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+            <span className="amazon-badge">Aseptic Technique</span>
+            <span className="amazon-badge">Bacterial Cell Culture</span>
+            <span className="amazon-badge">Translational Research</span>
+            <span className="amazon-badge">Blood Banking</span>
+            <span className="amazon-badge">Quality Control</span>
+            <span className="amazon-badge">Laboratory Equipment</span>
+            <span className="amazon-badge">Protein Purification</span>
+            <span className="amazon-badge">Molecular Biology</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

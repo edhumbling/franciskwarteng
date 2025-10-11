@@ -1,168 +1,140 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import SectionHeading from '../components/SectionHeading';
-import HighlightCard from '../components/HighlightCard';
-import StatisticCluster from '../components/StatisticCluster';
-
-const recentHighlights = [
-  {
-    title: 'Current Research',
-    description:
-      'Decoding translation initiation in Giardia lamblia to unveil selective therapeutic targets that spare human cells while neutralising parasites.',
-    href: '/projects',
-  },
-  {
-    title: 'Precision Diagnostics',
-    description:
-      'Delivering critical blood bank decisions at NYU Langone Health with rigorous cross-matching and antibody profiling.',
-    href: '/about#experience',
-  },
-  {
-    title: 'Scientific Narrative',
-    description:
-      'Articulating complex biomedical discoveries with clarity to empower collaboration and translational breakthroughs.',
-    href: '/essays',
-  },
-];
 
 export default function Home() {
   return (
-    <div className="space-y-16">
-      <section className="relative overflow-hidden rounded-[2rem] bg-[rgba(6,12,24,0.65)] p-8 md:p-12">
-        <div className="absolute inset-x-[-20%] top-[-60%] h-[420px] rounded-full bg-[radial-gradient(circle,rgba(45,212,191,0.22),transparent_60%)] blur-[80px]" aria-hidden />
-        <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center">
-          <div className="lg:w-1/2 space-y-6">
-            <span className="tag-pill w-max">Biomedical Scientist</span>
-            <h1 className="text-4xl font-semibold text-white md:text-6xl">
-              Advancing molecular medicine through precision laboratory science.
-            </h1>
-            <p className="text-soft md:text-lg">
-              Francis Kwarteng unites rigorous bench science with clinical stewardship, charting pathways that translate molecular insights into life-saving diagnostics and therapeutic strategies.
+    <div>
+      {/* Hero Section */}
+      <div className="amazon-card-elevated" style={{ marginBottom: "40px", padding: "40px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "40px", alignItems: "center" }}>
+          <div>
+            <div className="amazon-badge" style={{ marginBottom: "16px" }}>Biomedical Scientist</div>
+            <h1 style={{ fontSize: "36px", marginBottom: "16px" }}>Francis Kwarteng</h1>
+            <p className="text-secondary" style={{ fontSize: "16px", marginBottom: "20px", lineHeight: "1.6" }}>
+              BS MLS (ASCPi), MS | New York State Licensed Clinical Laboratory Technologist
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/projects"
-                className="rounded-xl border border-[rgba(94,234,212,0.45)] bg-[rgba(11,28,46,0.8)] px-6 py-3 text-sm font-medium text-[rgba(226,232,240,0.85)] transition hover:shadow-[0_0_28px_rgba(45,212,191,0.32)]"
-              >
-                Explore Research
+            <p className="text-muted" style={{ fontSize: "14px", marginBottom: "24px", lineHeight: "1.6" }}>
+              Biomedical Scientist focused on elucidating molecular mechanisms of physiological and pathological pathways with the aim of finding novel treatments for both infectious and metabolic diseases.
+            </p>
+            <div style={{ display: "flex", gap: "12px" }}>
+              <Link href="/projects" className="amazon-button-primary amazon-button">
+                View Research
               </Link>
-              <Link
-                href="/contact"
-                className="rounded-xl border border-transparent bg-[rgba(34,197,94,0.18)] px-6 py-3 text-sm font-medium text-[rgba(94,234,212,0.95)] transition hover:border-[rgba(34,197,94,0.4)]"
-              >
-                Partner with Francis
+              <Link href="/contact" className="amazon-button">
+                Get in Touch
               </Link>
             </div>
           </div>
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="glass-panel relative w-full max-w-sm overflow-hidden rounded-[2.5rem] p-6">
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-[rgba(59,222,199,0.3)]">
-                <Image src="/photo.jpeg" alt="Francis Kwarteng" fill className="object-cover" priority />
-              </div>
-              <div className="mt-6 space-y-2">
-                <p className="text-xs uppercase tracking-[0.32em] text-[rgba(148,163,184,0.78)]">Bronx, New York</p>
-                <p className="text-lg font-semibold text-white">Francis Kwarteng</p>
-                <p className="text-sm text-soft">BS MLS (ASCPi), MS — NYS Licensed Clinical Laboratory Technologist</p>
-              </div>
+          <div>
+            <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", borderRadius: "8px", overflow: "hidden" }}>
+              <Image src="/photo.jpeg" alt="Francis Kwarteng" fill className="object-cover" priority />
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="space-y-12">
-        <SectionHeading
-          eyebrow="Impact Snapshot"
-          title="Precision-driven outcomes"
-          description="Each metric reflects measurable progress in biomedical science and the lives it safeguards."
-        />
-        <StatisticCluster
-          items={[
-            { label: 'Critical transfusions safeguarded', value: '1.2K+', detail: 'Cross-match validations enabling life-saving interventions daily.' },
-            { label: 'Research discoveries', value: '7', detail: 'Peer-reviewed insights into parasitic translation mechanisms.' },
-            { label: 'Lab techniques optimised', value: '20+', detail: 'Protocols refined across blood banking and molecular biology.' },
-          ]}
-        />
-      </section>
-
-      <section className="space-y-12">
-        <SectionHeading
-          eyebrow="Recent Highlights"
-          title="Channelling research into clinical reality"
-          description="From molecular discovery to patient bedside, every initiative is architected to deliver reliable diagnostics and targeted therapies."
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          {recentHighlights.map((item) => (
-            <HighlightCard key={item.title} title={item.title} icon="◆" variant="accent">
-              <p>{item.description}</p>
-              <Link href={item.href} className="mt-4 inline-block text-sm text-[rgba(94,234,212,0.95)] transition hover:text-[rgba(20,184,166,1)]">
-                Navigate →
-              </Link>
-            </HighlightCard>
-          ))}
-        </div>
-      </section>
-
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Signature Expertise"
-          title="Where scientific rigour meets translational ambition"
-          description="Francis blends advanced diagnostics, parasitology, and molecular biology to reveal pathways that redraw our approach to infectious and metabolic diseases."
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          <HighlightCard title="Translational Parasitology" icon="🧪">
-            <p>
-              Mapping the protein-protein choreography that underpins Giardia lamblia&apos;s survival strategies to expose vulnerabilities that serve as precise therapeutic entry points.
-            </p>
-          </HighlightCard>
-          <HighlightCard title="Blood Bank Stewardship" icon="🩸">
-            <p>
-              Safeguarding transfusion medicine at NYU Langone through exacting cross-matching, antibody identification, and rapid problem-solving under critical conditions.
-            </p>
-          </HighlightCard>
-          <HighlightCard title="Laboratory Innovation" icon="⚙️">
-            <p>
-              Engineering resilient workflows for affinity purification, gel-based diagnostics, and regulatory compliance that uphold reproducibility without compromise.
-            </p>
-          </HighlightCard>
-          <HighlightCard title="Scientific Communication" icon="🧭">
-            <p>
-              Crafting narratives and mentorship that translate complex biomedical data into actionable strategies for clinicians, researchers, and students alike.
-            </p>
-          </HighlightCard>
-        </div>
-      </section>
-
-      <section className="space-y-10">
-        <SectionHeading
-          eyebrow="Next Steps"
-          title="Collaborate on the future of molecular medicine"
-          description="Whether digitally or in the laboratory, Francis is ready to co-design diagnostics and therapies that protect vulnerable populations."
-        />
-        <div className="glass-panel flex flex-col gap-6 rounded-3xl p-8 md:flex-row md:items-center md:justify-between">
-          <div className="space-y-3 md:max-w-xl">
-            <p className="text-xl font-semibold text-white">Open to research alliances, high-impact diagnostics, and speaking engagements.</p>
-            <p className="text-sm text-soft">
-              Share your vision—together we can blueprint scientific breakthroughs that are both elegant and effective.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="mailto:kwartengfo@warhawks.ulm.edu"
-              className="rounded-xl border border-[rgba(94,234,212,0.35)] px-5 py-3 text-sm font-medium text-[rgba(226,232,240,0.85)] transition hover:shadow-[0_0_22px_rgba(45,212,191,0.32)]"
-            >
-              Email Francis
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
-              className="rounded-xl border border-transparent bg-[rgba(8,47,73,0.6)] px-5 py-3 text-sm font-medium text-[rgba(94,234,212,0.95)] transition hover:border-[rgba(34,211,238,0.4)]"
-            >
-              Connect on LinkedIn
-            </Link>
+      {/* Stats */}
+      <div className="amazon-grid amazon-grid-3" style={{ marginBottom: "40px" }}>
+        <div className="amazon-card">
+          <div className="amazon-stat">
+            <span className="amazon-stat-value">1.2K+</span>
+            <span className="amazon-stat-label">Critical Transfusions Safeguarded</span>
           </div>
         </div>
-      </section>
+        <div className="amazon-card">
+          <div className="amazon-stat">
+            <span className="amazon-stat-value">7</span>
+            <span className="amazon-stat-label">Research Discoveries</span>
+          </div>
+        </div>
+        <div className="amazon-card">
+          <div className="amazon-stat">
+            <span className="amazon-stat-value">20+</span>
+            <span className="amazon-stat-label">Lab Techniques Optimized</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Current Position */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Current Position</h2>
+          <p className="amazon-section-description">
+            Blood Bank Technologist at NYU Langone Health
+          </p>
+        </div>
+        <div className="amazon-card">
+          <h3 style={{ marginBottom: "12px" }}>NYU Langone Health</h3>
+          <p className="amazon-badge" style={{ marginBottom: "16px" }}>October 2024 - Present</p>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            <li className="amazon-list-bullet">Skilled in blood typing, cross-matching, and antibody screening</li>
+            <li className="amazon-list-bullet">Operating advanced laboratory equipment with strict protocol adherence</li>
+            <li className="amazon-list-bullet">Ensuring compliance with regulatory standards and quality control</li>
+            <li className="amazon-list-bullet">Troubleshooting technical issues for timely, reliable results</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Research Focus */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Research Focus</h2>
+          <p className="amazon-section-description">
+            Investigating protein-protein interactions in Giardia lamblia
+          </p>
+        </div>
+        <div className="amazon-card">
+          <p className="text-secondary" style={{ fontSize: "14px", marginBottom: "20px", lineHeight: "1.6" }}>
+            My current project involves the use of affinity chromatography pull-down assay to characterize the protein-protein interaction in translation initiation of the parasite Giardia lamblia. By understanding the molecular mechanism of translation initiation of the parasite, I may find a drug target selectively toxic to the parasite.
+          </p>
+          <Link href="/projects" className="amazon-button">
+            Explore Research Projects →
+          </Link>
+        </div>
+      </div>
+
+      {/* Skills */}
+      <div className="amazon-section">
+        <div className="amazon-section-header">
+          <h2 className="amazon-section-title">Key Skills</h2>
+        </div>
+        <div className="amazon-grid amazon-grid-3">
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "8px" }}>Aseptic Technique</h3>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              Advanced sterile procedures for laboratory operations
+            </p>
+          </div>
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "8px" }}>Bacterial Cell Culture</h3>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              Expert cultivation and maintenance of bacterial cultures
+            </p>
+          </div>
+          <div className="amazon-card">
+            <h3 style={{ color: "var(--amazon-accent)", marginBottom: "8px" }}>Translational Research</h3>
+            <p className="text-muted" style={{ fontSize: "13px" }}>
+              Bridging laboratory discoveries to clinical applications
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="amazon-card-elevated" style={{ textAlign: "center", padding: "40px" }}>
+        <h2 style={{ marginBottom: "12px" }}>Ready to Collaborate?</h2>
+        <p className="text-muted" style={{ marginBottom: "24px", fontSize: "14px" }}>
+          Interested in biomedical research partnerships or discussing laboratory science? Let&apos;s connect.
+        </p>
+        <div style={{ display: "flex", gap: "12px", justifyContent: "center" }}>
+          <Link href="/contact" className="amazon-button-primary amazon-button">
+            Contact Francis
+          </Link>
+          <Link href="mailto:kwartengfo@warhawks.ulm.edu" className="amazon-button">
+            Send Email
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
