@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 export default function PageShell({ children }: { children: ReactNode }) {
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", overflowX: "hidden" }}>
       <NavigationBar />
-      <main className="amazon-container" style={{ flex: 1, paddingTop: "40px", paddingBottom: "40px" }}>
+      <main className="amazon-container" style={{ flex: 1, paddingTop: "100px", paddingBottom: "40px" }}>
         {children}
       </main>
       <Footer />
