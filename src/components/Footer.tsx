@@ -2,43 +2,112 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="amazon-footer">
-      <div className="amazon-footer-content">
-        <div className="amazon-grid amazon-grid-4" style={{ marginBottom: "40px" }}>
-          <div>
-            <h3 style={{ marginBottom: "16px", fontSize: "16px" }}>Navigation</h3>
-            <ul className="amazon-list">
-              <li className="amazon-list-item"><Link href="/">Home</Link></li>
-              <li className="amazon-list-item"><Link href="/about">About</Link></li>
-              <li className="amazon-list-item"><Link href="/projects">Projects</Link></li>
-              <li className="amazon-list-item"><Link href="/essays">Essays</Link></li>
-              <li className="amazon-list-item"><Link href="/contact">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 style={{ marginBottom: "16px", fontSize: "16px" }}>Research</h3>
-            <ul className="amazon-list">
-              <li className="amazon-list-item"><Link href="/projects">Current Projects</Link></li>
-              <li className="amazon-list-item"><Link href="/essays">Scientific Essays</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 style={{ marginBottom: "16px", fontSize: "16px" }}>Connect</h3>
-            <ul className="amazon-list">
-              <li className="amazon-list-item"><Link href="mailto:kwartengfo@warhawks.ulm.edu">Email</Link></li>
-              <li className="amazon-list-item"><Link href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab">LinkedIn</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 style={{ marginBottom: "16px", fontSize: "16px" }}>About</h3>
-            <p className="text-secondary" style={{ fontSize: "13px", lineHeight: "1.5" }}>
-              Biomedical Scientist focused on advancing molecular medicine through precision laboratory science.
-            </p>
-          </div>
+    <footer className="apple-footer">
+      <style jsx>{`
+        .apple-footer {
+          background: #000306;
+          border-top: 1px solid rgba(32, 139, 15, 0.2);
+          padding: 60px 0 40px;
+          margin-top: 80px;
+        }
+        .apple-footer-container {
+          max-width: 980px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        .footer-links-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 40px;
+        }
+        .footer-link {
+          color: #e5e5e7;
+          font-size: 14px;
+          text-decoration: none;
+          transition: color 0.2s ease;
+          padding: 4px 0;
+        }
+        .footer-link:hover {
+          color: #ffffff;
+        }
+        .footer-divider {
+          width: 100%;
+          height: 1px;
+          background: rgba(32, 139, 15, 0.2);
+          margin: 40px 0;
+        }
+        .footer-bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          text-align: center;
+        }
+        .footer-copyright {
+          color: #a1a1a6;
+          font-size: 12px;
+        }
+        .footer-contact {
+          color: #e5e5e7;
+          font-size: 13px;
+        }
+        .footer-contact a {
+          color: #208b0f;
+          text-decoration: none;
+          transition: color 0.2s ease;
+        }
+        .footer-contact a:hover {
+          color: #2bad12;
+        }
+        .footer-title {
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        @media (max-width: 768px) {
+          .apple-footer {
+            padding: 40px 0 30px;
+          }
+          .footer-links-section {
+            gap: 8px;
+          }
+          .footer-link {
+            font-size: 13px;
+          }
+        }
+      `}</style>
+      
+      <div className="apple-footer-container">
+        {/* Title */}
+        <h3 className="footer-title">Francis Kwarteng</h3>
+        
+        {/* Navigation Links */}
+        <div className="footer-links-section">
+          <Link href="/" className="footer-link">Home</Link>
+          <Link href="/about" className="footer-link">About</Link>
+          <Link href="/projects" className="footer-link">Projects</Link>
+          <Link href="/essays" className="footer-link">Essays</Link>
+          <Link href="/contact" className="footer-link">Contact</Link>
         </div>
-        <div className="amazon-divider"></div>
-        <div style={{ textAlign: "center", color: "var(--amazon-text-muted)", fontSize: "12px" }}>
-          © {new Date().getFullYear()} Francis Kwarteng. All rights reserved.
+        
+        {/* Divider */}
+        <div className="footer-divider"></div>
+        
+        {/* Bottom Section */}
+        <div className="footer-bottom">
+          <div className="footer-contact">
+            Contact: <a href="mailto:kwartengfo@warhawks.ulm.edu">kwartengfo@warhawks.ulm.edu</a>
+          </div>
+          <div className="footer-copyright">
+            © {new Date().getFullYear()} Francis Kwarteng. All rights reserved.
+          </div>
+          <div className="footer-copyright">
+            Biomedical Scientist | NYU Langone Health
+          </div>
         </div>
       </div>
     </footer>

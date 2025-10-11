@@ -57,10 +57,10 @@ export default function NavigationBar() {
                 />
               </div>
               <div className="hidden sm:block">
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.28em]" style={{ color: '#155c0a' }}>
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.28em]" style={{ color: '#a1a1a6' }}>
                   Biomedical Scientist
                 </p>
-                <p className="text-sm md:text-lg font-semibold transition-colors" style={{ color: '#208b0f' }}>
+                <p className="text-sm md:text-lg font-semibold transition-colors" style={{ color: '#ffffff' }}>
                   Francis Kwarteng
                 </p>
               </div>
@@ -73,7 +73,7 @@ export default function NavigationBar() {
                   key={href}
                   href={href}
                   className="relative overflow-hidden rounded-xl border border-transparent px-4 py-2 text-sm font-medium transition-all duration-300 hover:shadow-[0_0_20px_rgba(32,139,15,0.35)]"
-                  style={{ color: '#208b0f' }}
+                  style={{ color: '#e5e5e7' }}
                 >
                   <span className="relative z-10">{label}</span>
                 </Link>
@@ -115,8 +115,8 @@ export default function NavigationBar() {
               />
             </div>
             <div>
-              <p className="text-base font-semibold" style={{ color: '#208b0f' }}>Francis Kwarteng</p>
-              <p className="text-xs" style={{ color: '#155c0a' }}>Biomedical Scientist</p>
+              <p className="text-base font-semibold" style={{ color: '#ffffff' }}>Francis Kwarteng</p>
+              <p className="text-xs" style={{ color: '#a1a1a6' }}>Biomedical Scientist</p>
             </div>
           </div>
           <button
@@ -158,12 +158,12 @@ export default function NavigationBar() {
 
         {/* Menu Footer */}
         <div className="mobile-menu-footer">
-          <p className="text-xs mb-4 uppercase tracking-wider" style={{ color: '#155c0a' }}>Connect</p>
+          <p className="text-xs mb-4 uppercase tracking-wider" style={{ color: '#a1a1a6' }}>Connect</p>
           <div className="flex flex-col gap-3">
             <a
               href="mailto:kwartengfo@warhawks.ulm.edu"
               className="text-sm transition-colors"
-              style={{ color: '#208b0f' }}
+              style={{ color: '#e5e5e7' }}
               onClick={closeMobileMenu}
             >
               kwartengfo@warhawks.ulm.edu
@@ -171,7 +171,7 @@ export default function NavigationBar() {
             <a
               href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
               className="text-sm transition-colors"
-              style={{ color: '#208b0f' }}
+              style={{ color: '#e5e5e7' }}
               target="_blank"
               rel="noopener noreferrer"
             >
