@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 :root {
-  --amazon-bg-base: #0f1111;
-  --amazon-bg-secondary: #131921;
-  --amazon-bg-elevated: #1a1f2e;
+  --amazon-bg-base: #000306;
+  --amazon-bg-secondary: #0a0d10;
+  --amazon-bg-elevated: #12171c;
   --amazon-text-primary: #ffffff;
   --amazon-text-secondary: #e3e6e6;
   --amazon-text-muted: #adb1b8;
@@ -86,7 +86,19 @@ a:hover {
 
 @media (max-width: 768px) {
   .amazon-container {
-    padding: 0 16px;
+    padding: 0 12px;
+  }
+  
+  h1 {
+    font-size: 24px !important;
+  }
+  
+  h2 {
+    font-size: 18px !important;
+  }
+  
+  h3 {
+    font-size: 16px !important;
   }
 }
 
@@ -95,6 +107,13 @@ a:hover {
   border: 1px solid var(--amazon-border);
   border-radius: 8px;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .amazon-card {
+    padding: 16px;
+    border-radius: 6px;
+  }
 }
 
 .amazon-card-elevated {
@@ -223,6 +242,47 @@ a:hover {
 /* Spacing System */
 .amazon-section {
   padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .amazon-section {
+    padding: 24px 0;
+  }
+  
+  /* Page Shell Main */
+  .page-shell-main {
+    padding-top: 70px !important;
+    padding-bottom: 24px !important;
+  }
+  
+  /* Responsive Hero Grid */
+  .hero-grid-responsive {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  
+  .hero-grid-responsive > div:last-child > div {
+    max-width: 200px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Responsive About Header */
+  .about-header-responsive {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center;
+  }
+  
+  .about-header-responsive > div:first-child {
+    margin: 0 auto !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  /* Responsive Card Padding */
+  .amazon-card-elevated {
+    padding: 20px !important;
+  }
 }
 
 .amazon-section-header {

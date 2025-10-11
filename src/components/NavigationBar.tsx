@@ -44,24 +44,24 @@ export default function NavigationBar() {
         }`}
       >
         <div className="amazon-container">
-          <div className="amazon-card flex items-center justify-between gap-4 rounded-2xl px-4 md:px-6 py-3 md:py-4 shadow-lg">
+          <div className="amazon-card flex items-center justify-between gap-3 rounded-xl md:rounded-2xl px-3 md:px-6 py-2 md:py-4 shadow-lg">
             {/* Logo/Brand */}
             <Link href="/" className="flex items-center gap-2 md:gap-3 group flex-shrink-0">
-              <div className="relative h-10 w-10 md:h-11 md:w-11 overflow-hidden rounded-full border border-amazon-accent">
+              <div className="relative h-9 w-9 md:h-11 md:w-11 overflow-hidden rounded-full border border-amazon-accent flex-shrink-0">
                 <Image
                   src="/photo.jpeg"
                   alt="Francis Kwarteng"
                   fill
-                  sizes="44px"
+                  sizes="(max-width: 768px) 36px, 44px"
                   className="object-cover"
                   priority
                 />
               </div>
               <div className="hidden sm:block">
-                <p className="text-xs uppercase tracking-[0.28em] text-secondary">
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.28em] text-secondary">
                   Biomedical Scientist
                 </p>
-                <p className="text-base md:text-lg font-semibold text-primary transition-colors group-hover:text-accent">
+                <p className="text-sm md:text-lg font-semibold text-primary transition-colors group-hover:text-accent">
                   Francis Kwarteng
                 </p>
               </div>

@@ -5,8 +5,19 @@ export default function AboutPage() {
     <div>
       {/* Header */}
       <div className="amazon-card-elevated" style={{ marginBottom: "40px", padding: "40px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "32px", alignItems: "start" }}>
-          <div style={{ position: "relative", width: "200px", height: "200px", borderRadius: "8px", overflow: "hidden" }}>
+        <div style={{ 
+          display: "grid", 
+          gridTemplateColumns: "200px 1fr", 
+          gap: "32px", 
+          alignItems: "start" 
+        }} className="about-header-responsive">
+          <div style={{ 
+            position: "relative", 
+            width: "200px", 
+            height: "200px", 
+            borderRadius: "8px", 
+            overflow: "hidden" 
+          }}>
             <Image src="/photo.jpeg" alt="Francis Kwarteng" fill className="object-cover" />
           </div>
           <div>

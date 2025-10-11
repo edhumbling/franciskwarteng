@@ -6,7 +6,12 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <div className="amazon-card-elevated" style={{ marginBottom: "40px", padding: "40px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "40px", alignItems: "center" }}>
+        <div style={{ 
+          display: "grid", 
+          gridTemplateColumns: "1fr 300px", 
+          gap: "40px", 
+          alignItems: "center" 
+        }} className="hero-grid-responsive">
           <div>
             <div className="amazon-badge" style={{ marginBottom: "16px" }}>Biomedical Scientist</div>
             <h1 style={{ fontSize: "36px", marginBottom: "16px" }}>Francis Kwarteng</h1>
@@ -16,7 +21,7 @@ export default function Home() {
             <p className="text-muted" style={{ fontSize: "14px", marginBottom: "24px", lineHeight: "1.6" }}>
               Biomedical Scientist focused on elucidating molecular mechanisms of physiological and pathological pathways with the aim of finding novel treatments for both infectious and metabolic diseases.
             </p>
-            <div style={{ display: "flex", gap: "12px" }}>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <Link href="/projects" className="amazon-button-primary amazon-button">
                 View Research
               </Link>
@@ -26,7 +31,14 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", borderRadius: "8px", overflow: "hidden" }}>
+            <div style={{ 
+              position: "relative", 
+              width: "100%", 
+              aspectRatio: "1/1", 
+              borderRadius: "8px", 
+              overflow: "hidden",
+              maxWidth: "300px"
+            }}>
               <Image src="/photo.jpeg" alt="Francis Kwarteng" fill className="object-cover" priority />
             </div>
           </div>
