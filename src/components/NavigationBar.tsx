@@ -3,14 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import SearchComponent from "./SearchComponent";
 
 const navLinks = [
-  { href: "/", label: "Home", icon: "🏠" },
-  { href: "/about", label: "About", icon: "👤" },
-  { href: "/projects", label: "Projects", icon: "🔬" },
-  { href: "/essays", label: "Essays", icon: "✍️" },
-  { href: "/contact", label: "Contact", icon: "📧" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/essays", label: "Essays" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function NavigationBar() {
@@ -23,7 +22,7 @@ export default function NavigationBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu when clicking outside
+  // Lock body scroll when menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -81,11 +80,6 @@ export default function NavigationBar() {
               ))}
             </nav>
 
-            {/* Desktop Search */}
-            <div className="hidden md:block w-48 lg:w-64">
-              <SearchComponent />
-            </div>
-
             {/* Hamburger Menu Button */}
             <button
               className="hamburger-button lg:hidden"
@@ -106,22 +100,22 @@ export default function NavigationBar() {
         onClick={closeMobileMenu}
       />
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Full Screen Black Glass */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         {/* Menu Header */}
         <div className="mobile-menu-header">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 overflow-hidden rounded-full border border-amazon-accent">
+            <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-amazon-accent">
               <Image
                 src="/photo.jpeg"
                 alt="Francis Kwarteng"
                 fill
-                sizes="40px"
+                sizes="48px"
                 className="object-cover"
               />
             </div>
             <div>
-              <p className="text-sm font-semibold text-primary">Francis Kwarteng</p>
+              <p className="text-base font-semibold text-primary">Francis Kwarteng</p>
               <p className="text-xs text-muted">Biomedical Scientist</p>
             </div>
           </div>
@@ -131,14 +125,14 @@ export default function NavigationBar() {
             aria-label="Close menu"
           >
             <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M15 5L5 15M5 5L15 15"
+                d="M18 6L6 18M6 6L18 18"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
@@ -148,21 +142,15 @@ export default function NavigationBar() {
           </button>
         </div>
 
-        {/* Menu Search */}
-        <div className="p-4 border-b border-amazon-border">
-          <SearchComponent />
-        </div>
-
-        {/* Menu Navigation */}
+        {/* Menu Navigation - Large Apple-style Links */}
         <nav className="mobile-menu-nav">
-          {navLinks.map(({ href, label, icon }) => (
+          {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               className="mobile-menu-link"
               onClick={closeMobileMenu}
             >
-              <span className="mr-3 text-xl">{icon}</span>
               {label}
             </Link>
           ))}
@@ -170,23 +158,22 @@ export default function NavigationBar() {
 
         {/* Menu Footer */}
         <div className="mobile-menu-footer">
-          <p className="text-xs text-muted mb-3">Connect with Francis</p>
-          <div className="flex gap-3">
+          <p className="text-xs text-muted mb-4 uppercase tracking-wider">Connect</p>
+          <div className="flex flex-col gap-3">
             <a
               href="mailto:kwartengfo@warhawks.ulm.edu"
-              className="flex-1 amazon-button text-center text-sm"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="text-secondary text-sm hover:text-accent transition-colors"
+              onClick={closeMobileMenu}
             >
-              Email
+              kwartengfo@warhawks.ulm.edu
             </a>
             <a
               href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
-              className="flex-1 amazon-button text-center text-sm"
+              className="text-secondary text-sm hover:text-accent transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              LinkedIn Profile →
             </a>
           </div>
         </div>
