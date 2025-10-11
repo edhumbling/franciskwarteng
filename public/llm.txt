@@ -1,0 +1,127 @@
+# Francis Kwarteng - Biomedical Scientist
+
+## About
+Francis Kwarteng is a Biomedical Scientist focused on elucidating molecular mechanisms of physiological and pathological pathways with the aim of finding novel treatments for both infectious and metabolic diseases. He is highly motivated to make the world a better place through disease elimination and control.
+
+## Professional Information
+- **Name:** Francis Kwarteng
+- **Title:** Biomedical Scientist, Blood Bank Technologist
+- **Current Position:** NYU Langone Health (October 2024 - Present)
+- **Location:** Bronx, New York, United States
+- **Email:** kwartengfo@warhawks.ulm.edu
+- **LinkedIn:** https://www.linkedin.com/in/franciskwarteng-8711bb1ab
+
+## Education
+- **Master of Science (MS):** Biology/Biological Sciences, University of Louisiana at Monroe (2020-2023)
+- **Bachelor of Science (BS):** Medical Laboratory Science, University of Cape Coast (2015-2019)
+
+## Certifications
+- BSc Medical Laboratory Science
+- Medical Laboratory Scientist (ASCPi)CM
+- Clinical Laboratory Scientist (092)
+- New York State Licensed Clinical Laboratory Technologist
+
+## Top Skills
+- Aseptic Technique
+- Bacterial Cell Culture
+- Translational Research
+- Medical Laboratory Science
+- Biomedical Research
+
+## Current Research
+Francis is currently working on a project involving the use of affinity chromatography pull-down assay to characterize protein-protein interactions in translation initiation of the parasite Giardia lamblia. By understanding the molecular mechanism of translation initiation of the parasite, he aims to find drug targets selectively toxic to the parasite.
+
+### Research Focus Areas:
+- GleIF4E2 and GleIF2B protein interactions
+- Parasitic disease mechanisms
+- Drug target identification
+- Protein purification techniques
+
+## Professional Experience
+
+### NYU Langone Health (October 2024 - Present)
+**Blood Bank Technologist**
+- Skilled in blood typing, cross-matching, and antibody screening for safe and efficient blood transfusion services
+- Experienced in operating advanced laboratory equipment and maintaining strict adherence to protocols
+- Ensure compliance with regulatory standards and participate in quality control
+- Proficient in troubleshooting and resolving technical issues to provide timely and reliable test results
+
+### Westchester Medical Center (January 2024 - July 2024)
+**Medical Laboratory Scientist II**
+- Performs ABO/RH, DAT, IAT and antibody Identification, utilizing tube and column agglutination (gel testing)
+- Issues compatible blood products and components to enhance patient care and treatment
+- Operates and performs QC on Ortho Vision Swift Analyzer
+- Performs batch antigen screening for in-house red blood cell stock
+
+### UAMS - University of Arkansas (June 2023 - December 2023)
+**Medical Laboratory Scientist**
+
+### University of Louisiana Monroe (August 2022 - May 2023)
+**Graduate Teaching Assistant**
+- Taught Fundamentals of Anatomy and Physiology lab 1, an undergraduate course averaging 70 students per semester
+- Developed quizzes, exams, and homework
+- Coordinated grading and labs with a team of 3 teaching assistants
+
+### University of Louisiana Monroe (January 2021 - May 2023)
+**Graduate Research Assistant**
+- Demonstrated that GleIF4E2 interacts with GleIF2B
+- Found that GleIF4E2 amino residues L12 and F45-F46 are required for binding to GleIF2B
+- Demonstrated that the conserved lysine stretches of GleIF2B are required for interaction with GleIF4E2
+- Optimized affinity purification of GST fusion proteins and His tag fusion proteins
+
+## Research Publications and Achievements
+- Demonstrated protein-protein interactions between GleIF4E2 and GleIF2B in Giardia lamblia
+- Identified specific amino acid residues required for protein binding
+- Optimized laboratory techniques for protein purification
+- Published research on translation initiation mechanisms
+
+## Website Structure
+- **Home:** https://franciskwarteng.com/ - Main landing page with overview
+- **About:** https://franciskwarteng.com/about - Detailed professional information
+- **Projects:** https://franciskwarteng.com/projects - Research projects and scientific work
+- **Essays:** https://franciskwarteng.com/essays - Blog posts and scientific essays
+- **Contact:** https://franciskwarteng.com/contact - Professional contact information
+- **Index:** https://franciskwarteng.com/index - Complete website index
+- **Site Map:** https://franciskwarteng.com/sitemap - Website structure map
+
+## Key Research Areas
+1. **Parasitic Disease Research:** Focus on Giardia lamblia and other parasitic organisms
+2. **Protein-Protein Interactions:** Studying molecular mechanisms of protein binding
+3. **Translation Initiation:** Understanding cellular protein synthesis mechanisms
+4. **Drug Target Identification:** Finding selective therapeutic targets
+5. **Laboratory Techniques:** Developing and optimizing research methods
+
+## Collaboration Opportunities
+Francis is interested in:
+- Biomedical research partnerships
+- Laboratory technique development
+- Scientific writing and communication
+- Educational initiatives
+- Infectious disease research collaborations
+
+## Professional Philosophy
+Francis is a hard-working, diligent, and results-oriented individual who is highly motivated to make the world a better place through disease elimination and control. He believes in the power of scientific research to solve complex medical problems and improve human health.
+
+## Technical Expertise
+- Advanced laboratory equipment operation
+- Quality control and regulatory compliance
+- Research methodology development
+- Scientific data analysis
+- Teaching and mentoring
+- Cross-cultural collaboration (Ghana to United States)
+
+## Contact Information
+- **Email:** kwartengfo@warhawks.ulm.edu
+- **LinkedIn:** https://www.linkedin.com/in/franciskwarteng-8711bb1ab
+- **Location:** Bronx, New York, United States
+- **Professional Focus:** Biomedical Research, Medical Laboratory Science, Parasitic Disease Research
+
+## Last Updated
+December 19, 2024
+
+## Website Metadata
+- **Domain:** franciskwarteng.com
+- **Technology:** Next.js 15 with TypeScript
+- **Design:** Dark glassmorphic theme with green aesthetics
+- **Accessibility:** Mobile-responsive, SEO-optimized
+- **Content:** Professional portfolio and research showcase

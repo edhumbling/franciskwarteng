@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://franciskwarteng.com/sitemap.xml
+
+# LLM/AI Crawling
+# For AI search engines and LLMs
+# Structured content overview available at:
+# https://franciskwarteng.com/llm.txt
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/

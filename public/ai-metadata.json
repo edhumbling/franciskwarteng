@@ -1,0 +1,218 @@
+{
+  "website": {
+    "name": "Francis Kwarteng - Biomedical Scientist",
+    "domain": "franciskwarteng.com",
+    "description": "Professional website of Francis Kwarteng, a Biomedical Scientist focused on molecular mechanisms of physiological and pathological pathways",
+    "type": "professional_portfolio",
+    "language": "en",
+    "last_updated": "2024-12-19"
+  },
+  "person": {
+    "name": "Francis Kwarteng",
+    "title": "Biomedical Scientist",
+    "current_position": "Blood Bank Technologist at NYU Langone Health",
+    "location": "Bronx, New York, United States",
+    "email": "kwartengfo@warhawks.ulm.edu",
+    "linkedin": "https://www.linkedin.com/in/franciskwarteng-8711bb1ab",
+    "credentials": [
+      "BS MLS (ASCPi)",
+      "MS Biology",
+      "New York State Licensed Clinical Laboratory Technologist"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Master of Science (MS)",
+      "field": "Biology/Biological Sciences",
+      "institution": "University of Louisiana at Monroe",
+      "years": "2020-2023"
+    },
+    {
+      "degree": "Bachelor of Science (BS)",
+      "field": "Medical Laboratory Science",
+      "institution": "University of Cape Coast",
+      "years": "2015-2019"
+    }
+  ],
+  "skills": [
+    "Aseptic Technique",
+    "Bacterial Cell Culture",
+    "Translational Research",
+    "Medical Laboratory Science",
+    "Biomedical Research",
+    "Protein Purification",
+    "Quality Control",
+    "Laboratory Equipment Operation"
+  ],
+  "research": {
+    "current": {
+      "title": "Giardia lamblia Translation Initiation Study",
+      "description": "Investigating protein-protein interactions in translation initiation of the parasite Giardia lamblia using affinity chromatography pull-down assays",
+      "objective": "Find drug targets selectively toxic to the parasite",
+      "focus": "GleIF4E2 and GleIF2B protein interactions"
+    },
+    "past": [
+      {
+        "title": "GleIF4E2-GleIF2B Interaction Study",
+        "description": "Demonstrated protein-protein interactions between GleIF4E2 and GleIF2B in Giardia lamblia",
+        "achievements": [
+          "Identified GleIF4E2 amino residues L12 and F45-F46 as required for binding",
+          "Demonstrated conserved lysine stretches of GleIF2B are required for interaction",
+          "Optimized affinity purification protocols for GST and His-tagged fusion proteins"
+        ]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "position": "Blood Bank Technologist",
+      "organization": "NYU Langone Health",
+      "duration": "October 2024 - Present",
+      "location": "United States",
+      "responsibilities": [
+        "Blood typing, cross-matching, and antibody screening",
+        "Operating advanced laboratory equipment",
+        "Ensuring compliance with regulatory standards",
+        "Quality control and troubleshooting"
+      ]
+    },
+    {
+      "position": "Medical Laboratory Scientist II",
+      "organization": "Westchester Medical Center",
+      "duration": "January 2024 - July 2024",
+      "location": "Westchester County, New York",
+      "responsibilities": [
+        "ABO/RH, DAT, IAT and antibody Identification",
+        "Issuing compatible blood products",
+        "Operating Ortho Vision Swift Analyzer",
+        "Performing batch antigen screening"
+      ]
+    },
+    {
+      "position": "Medical Laboratory Scientist",
+      "organization": "UAMS - University of Arkansas",
+      "duration": "June 2023 - December 2023",
+      "location": "United States"
+    },
+    {
+      "position": "Graduate Teaching Assistant",
+      "organization": "University of Louisiana Monroe",
+      "duration": "August 2022 - May 2023",
+      "location": "Monroe, Louisiana",
+      "responsibilities": [
+        "Taught Fundamentals of Anatomy and Physiology lab",
+        "Developed quizzes, exams, and homework",
+        "Coordinated grading and labs with teaching team"
+      ]
+    },
+    {
+      "position": "Graduate Research Assistant",
+      "organization": "University of Louisiana Monroe",
+      "duration": "January 2021 - May 2023",
+      "location": "Monroe, Louisiana",
+      "achievements": [
+        "Demonstrated GleIF4E2 interacts with GleIF2B",
+        "Identified specific amino acid residues for binding",
+        "Optimized protein purification techniques"
+      ]
+    }
+  ],
+  "website_structure": {
+    "main_pages": [
+      {
+        "url": "/",
+        "title": "Home",
+        "description": "Main landing page with professional overview"
+      },
+      {
+        "url": "/about",
+        "title": "About",
+        "description": "Detailed professional information and background"
+      },
+      {
+        "url": "/projects",
+        "title": "Projects",
+        "description": "Research projects and scientific work"
+      },
+      {
+        "url": "/essays",
+        "title": "Essays",
+        "description": "Blog posts and scientific essays"
+      },
+      {
+        "url": "/contact",
+        "title": "Contact",
+        "description": "Professional contact information"
+      },
+      {
+        "url": "/index",
+        "title": "Index",
+        "description": "Complete website index and navigation"
+      },
+      {
+        "url": "/sitemap",
+        "title": "Site Map",
+        "description": "Website structure and navigation guide"
+      }
+    ],
+    "ai_resources": [
+      {
+        "url": "/llm.txt",
+        "title": "LLM.txt",
+        "description": "Structured content overview for AI systems"
+      },
+      {
+        "url": "/sitemap.xml",
+        "title": "Sitemap",
+        "description": "XML sitemap for search engines"
+      },
+      {
+        "url": "/robots.txt",
+        "title": "Robots.txt",
+        "description": "Crawling instructions for search engines"
+      }
+    ]
+  },
+  "content_themes": [
+    "Biomedical Research",
+    "Medical Laboratory Science",
+    "Parasitic Disease Research",
+    "Protein-Protein Interactions",
+    "Translation Initiation",
+    "Drug Target Identification",
+    "Laboratory Techniques",
+    "Quality Control",
+    "Research Collaboration",
+    "Scientific Communication"
+  ],
+  "target_audience": [
+    "Biomedical researchers",
+    "Medical laboratory scientists",
+    "Academic collaborators",
+    "Research institutions",
+    "Healthcare professionals",
+    "Scientific community"
+  ],
+  "collaboration_opportunities": [
+    "Biomedical research partnerships",
+    "Laboratory technique development",
+    "Scientific writing and communication",
+    "Educational initiatives",
+    "Infectious disease research",
+    "Protein interaction studies"
+  ],
+  "technical_specifications": {
+    "framework": "Next.js 15",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "design": "Dark glassmorphic theme with green aesthetics",
+    "features": [
+      "Mobile responsive",
+      "SEO optimized",
+      "AI/LLM friendly",
+      "Search functionality",
+      "Structured data",
+      "Accessibility compliant"
+    ]
+  }
+}
