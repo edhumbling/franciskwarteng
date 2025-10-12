@@ -1177,13 +1177,33 @@ footer {
   margin: 10px 0 48px;
   padding: 16px 0;
   background: linear-gradient(90deg, rgba(32,139,15,0.06), transparent 25%, transparent 75%, rgba(32,139,15,0.06));
-  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+.hero-carousel-wrapper::before,
+.hero-carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #000204 0%, rgba(0,2,4,0));
+}
+
+.hero-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, #000204 0%, rgba(0,2,4,0));
 }
 
 .hero-carousel-track {
   display: flex;
   width: max-content;
-  animation: hero-carousel-scroll 38s linear infinite;
+  animation: hero-carousel-scroll 36s linear infinite;
 }
 
 .hero-carousel-segment {
@@ -1199,6 +1219,7 @@ footer {
   background: rgba(0, 3, 6, 0.75);
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
 }
 
 .hero-carousel-item:last-child {
@@ -1232,11 +1253,15 @@ footer {
     margin: 8px 0 32px;
   }
   .hero-carousel-track {
-    animation-duration: 30s;
+    animation-duration: 28s;
   }
   .hero-carousel-item {
     flex-basis: clamp(240px, 82vw, 320px);
     margin-right: clamp(10px, 3vw, 24px);
+  }
+  .hero-carousel-wrapper::before,
+  .hero-carousel-wrapper::after {
+    width: 40px;
   }
 }
 
