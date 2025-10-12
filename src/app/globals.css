@@ -934,3 +934,211 @@ footer {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Signature Footer Inspired Layout */
+.signature-footer {
+  background: linear-gradient(180deg, #000204 0%, #020608 100%);
+  border-top: 2px solid rgba(32, 139, 15, 0.4);
+  position: relative;
+  margin-top: 120px;
+}
+
+.signature-footer-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  padding: 0 40px;
+}
+
+.signature-footer-stripes span {
+  background: rgba(32, 139, 15, 0.35);
+  border-radius: 999px;
+}
+
+.signature-footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
+}
+
+.signature-footer-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.2fr) repeat(3, minmax(200px, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+
+.signature-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signature-footer-eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: rgba(229, 229, 231, 0.6);
+}
+
+.signature-footer-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.signature-footer-tagline {
+  color: #a1a1a6;
+  line-height: 1.7;
+  max-width: 320px;
+  font-size: 14px;
+}
+
+.signature-footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.signature-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(32, 139, 15, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: 'Amazon Ember', sans-serif;
+}
+
+.signature-social-link:hover {
+  background: rgba(32, 139, 15, 0.2);
+  border-color: rgba(32, 139, 15, 0.8);
+  box-shadow: 0 0 20px rgba(32, 139, 15, 0.3);
+}
+
+.signature-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signature-footer-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 13px;
+  color: rgba(229, 229, 231, 0.7);
+}
+
+.signature-footer-links,
+.signature-footer-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signature-footer-link {
+  color: #e5e5e7;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.signature-footer-link:hover {
+  color: #2bad12;
+}
+
+.signature-footer-details li {
+  color: #a1a1a6;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.signature-footer-note {
+  color: #a1a1a6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.signature-footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: rgba(32, 139, 15, 0.2);
+  border: 1px solid rgba(32, 139, 15, 0.6);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.signature-footer-button:hover {
+  background: rgba(32, 139, 15, 0.35);
+  border-color: rgba(32, 139, 15, 0.9);
+  box-shadow: 0 0 25px rgba(32, 139, 15, 0.3);
+}
+
+.signature-footer-divider {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(32, 139, 15, 0.6), transparent 70%);
+  margin: 50px 0 30px;
+}
+
+.signature-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #a1a1a6;
+  font-size: 13px;
+}
+
+.signature-footer-bottom-links {
+  display: flex;
+  gap: 16px;
+}
+
+.signature-footer-bottom-links .signature-footer-link {
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .signature-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .signature-footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .signature-footer-container {
+    padding: 60px 24px 32px;
+  }
+
+  .signature-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .signature-footer-brand {
+    grid-column: span 1;
+  }
+}
+

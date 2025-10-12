@@ -3,98 +3,95 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="majestic-footer">
-        <div className="majestic-footer-container">
-          {/* Main Footer Content */}
-          <div className="footer-content-grid">
-            {/* Brand Column */}
-            <div className="footer-brand-column">
-              <h3 className="footer-brand-title">Francis Kwarteng</h3>
-              <p className="footer-brand-subtitle">BS MLS (ASCPi), MS</p>
-              <p className="footer-brand-description">
-                Biomedical Scientist | NYU Langone Health
+      <footer className="signature-footer">
+        <div className="signature-footer-stripes" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div className="signature-footer-container">
+          <div className="signature-footer-grid">
+            {/* Brand + Mission */}
+            <div className="signature-footer-brand">
+              <p className="signature-footer-eyebrow">Biomedical Scientist</p>
+              <h3 className="signature-footer-title">Francis Kwarteng</h3>
+              <p className="signature-footer-tagline">
+                Bridging molecular diagnostics and translational research to power equitable healthcare innovation.
               </p>
-              <p className="footer-brand-description" style={{ marginTop: '12px' }}>
-                Bronx, New York
-              </p>
+              <div className="signature-footer-socials">
+                <a
+                  href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="signature-social-link"
+                  aria-label="LinkedIn"
+                >
+                  in
+                </a>
+                <a
+                  href="mailto:kwartengfo@warhawks.ulm.edu"
+                  className="signature-social-link"
+                  aria-label="Email"
+                >
+                  ✉
+                </a>
+              </div>
             </div>
 
-            {/* Explore Column */}
-            <div className="footer-column">
-              <h4 className="footer-column-title">Explore</h4>
-              <ul className="footer-links-list">
-                <li><Link href="/" className="footer-link-item">Home</Link></li>
-                <li><Link href="/about" className="footer-link-item">About</Link></li>
-                <li><Link href="/research" className="footer-link-item">Research</Link></li>
-                <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
-                <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
-                <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
+            {/* Navigation */}
+            <div className="signature-footer-column">
+              <h4 className="signature-footer-heading">Site Navigation</h4>
+              <ul className="signature-footer-links">
+                <li><Link href="/" className="signature-footer-link">Home</Link></li>
+                <li><Link href="/about" className="signature-footer-link">About</Link></li>
+                <li><Link href="/research" className="signature-footer-link">Research</Link></li>
+                <li><Link href="/projects" className="signature-footer-link">Projects</Link></li>
+                <li><Link href="/essays" className="signature-footer-link">Essays &amp; Notes</Link></li>
+                <li><Link href="/contact" className="signature-footer-link">Contact</Link></li>
               </ul>
             </div>
 
-            {/* Highlights + Connect Column */}
-            <div className="footer-column footer-column-stacked">
-              <div className="footer-subgroup">
-                <h4 className="footer-column-title">Highlights</h4>
-                <ul className="footer-links-list">
-                  <li><Link href="/research" className="footer-link-item">Publications</Link></li>
-                  <li><Link href="/essays" className="footer-link-item">Essays & Notes</Link></li>
-                  <li><Link href="/projects" className="footer-link-item">Bibinii Farms</Link></li>
-                </ul>
-              </div>
+            {/* Contact Information */}
+            <div className="signature-footer-column">
+              <h4 className="signature-footer-heading">Contact Information</h4>
+              <ul className="signature-footer-details">
+                <li>📍 Bronx, New York</li>
+                <li>🏥 NYU Langone Health</li>
+                <li>
+                  ✉ <a href="mailto:kwartengfo@warhawks.ulm.edu" className="signature-footer-link">kwartengfo@warhawks.ulm.edu</a>
+                </li>
+                <li>
+                  in <a
+                    href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="signature-footer-link"
+                  >linkedin.com/in/franciskwarteng-8711bb1ab</a>
+                </li>
+              </ul>
+            </div>
 
-              <div className="footer-subgroup">
-                <h4 className="footer-column-title">Connect</h4>
-                <ul className="footer-links-list">
-                  <li>
-                    <a href="mailto:kwartengfo@warhawks.ulm.edu" className="footer-link-item">
-                      Email
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="footer-link-item"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                </ul>
-                <div className="footer-contact-block">
-                  <p className="footer-contact-label">Email:</p>
-                  <a 
-                    href="mailto:kwartengfo@warhawks.ulm.edu" 
-                    className="footer-contact-email"
-                  >
-                    kwartengfo@warhawks.ulm.edu
-                  </a>
-                </div>
-              </div>
+            {/* Newsletter CTA */}
+            <div className="signature-footer-column">
+              <h4 className="signature-footer-heading">Newsletter</h4>
+              <p className="signature-footer-note">
+                Subscribe to lab updates, publications, and invited talks from Francis Kwarteng.
+              </p>
+              <a href="mailto:kwartengfo@warhawks.ulm.edu?subject=Newsletter%20Subscription" className="signature-footer-button">
+                Subscribe
+              </a>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="footer-majestic-divider"></div>
+          <div className="signature-footer-divider" aria-hidden="true"></div>
 
-          {/* Bottom Section */}
-          <div className="footer-bottom-section">
-            <div className="footer-bottom-left">
-              <p className="footer-copyright">
-                © {new Date().getFullYear()} Francis Kwarteng. All rights reserved.
-              </p>
-              <p className="footer-tagline">
-                Advancing molecular medicine through precision laboratory science
-              </p>
-            </div>
-            <div className="footer-bottom-right">
-              <p className="footer-location">
-                🏥 NYU Langone Health
-              </p>
-              <p className="footer-location">
-                📍 Bronx, New York, United States
-              </p>
+          <div className="signature-footer-bottom">
+            <p>© {new Date().getFullYear()} Francis Kwarteng. All rights reserved.</p>
+            <div className="signature-footer-bottom-links">
+              <Link href="/sitemap" className="signature-footer-link">Sitemap</Link>
+              <Link href="/index" className="signature-footer-link">Index</Link>
             </div>
           </div>
         </div>
