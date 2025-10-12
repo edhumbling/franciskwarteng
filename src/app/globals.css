@@ -562,117 +562,82 @@ a:hover {
   margin-bottom: 8px;
 }
 
-/* Infinite Scrolling Text - Optimized Implementation */
+/* Infinite Scrolling Text - Overhauled */
 .infinite-scroll-container {
   background: #000306;
   border-top: 1px solid rgba(32, 139, 15, 0.2);
   overflow: hidden;
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
   width: 100%;
-  /* mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
 }
 
 .infinite-scroll-text {
   display: flex;
   white-space: nowrap;
-  animation: scroll-left 25s linear infinite;
   will-change: transform;
   width: max-content;
-  transform: translateZ(0); /* Hardware acceleration */
+  animation: scroll-left 12s linear infinite;
 }
 
 .infinite-scroll-text span {
-  font-family: 'Inter', 'Amazon Ember', sans-serif;
-  font-size: 320px;
+  font-family: 'Micholate', 'Inter', 'Amazon Ember', sans-serif;
+  font-size: 360px;
   line-height: 0.9;
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 5px;
-  padding: 0 20px;
-  box-sizing: border-box; /* Ensure padding is included */
-  text-transform: none;
+  letter-spacing: 6px;
+  padding: 0 24px;
   display: inline-block;
   flex-shrink: 0;
   white-space: nowrap;
-  text-shadow: 0 0 30px rgba(32, 139, 15, 0.3);
-  transform: translateZ(0); /* Hardware acceleration */
+  text-shadow: 0 0 30px rgba(32, 139, 15, 0.35);
+  transform: translateZ(0);
 }
 
+/* With exactly two spans, move by -50% for a seamless loop */
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-25%); /* Changed to -25% for 4 spans */
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Mobile Responsive Footer */
+/* Desktop hard guards to ensure hamburger never shows */
+@media (min-width: 768px) {
+  .hamburger-button,
+  .mobile-menu,
+  .mobile-menu-overlay { display: none !important; }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
-  .footer-content-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-  
-  .infinite-scroll-container {
-    padding: 60px 0;
-  }
-  
+  .infinite-scroll-container { padding: 50px 0; }
+  .infinite-scroll-text { animation-duration: 11s; }
   .infinite-scroll-text span {
-    font-size: 180px; /* Increased 3x from 60px */
-    letter-spacing: 2px; /* Increased from 1px */
-    padding: 0 10px; /* Increased from 5px */
+    font-size: 220px;
+    letter-spacing: 3px;
+    padding: 0 14px;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .majestic-footer {
-    padding: 60px 0 40px;
-    margin-top: 80px;
-  }
-  
-  .majestic-footer-container {
-    padding: 0 20px;
-  }
-  
-  .footer-content-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-  
-  .footer-bottom-section {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .infinite-scroll-container {
-    padding: 50px 0;
-  }
-  
+  .infinite-scroll-container { padding: 40px 0; }
+  .infinite-scroll-text { animation-duration: 10s; }
   .infinite-scroll-text span {
-    font-size: 300px; /* Increased 3x from 100px */
-    letter-spacing: 4px; /* Increased from 2px */
-    padding: 0 20px; /* Increased from 10px */
-  }
-  
-  /* Better iframe viewing on mobile */
-  iframe {
-    min-height: 600px !important;
+    font-size: 120px; /* 3x from prior small sizes */
+    letter-spacing: 2px;
+    padding: 0 10px;
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
-  .infinite-scroll-container {
-    padding: 40px 0;
-  }
-  
+  .infinite-scroll-container { padding: 32px 0; }
+  .infinite-scroll-text { animation-duration: 9s; }
   .infinite-scroll-text span {
-    font-size: 60px; /* Reduced from 60px */
-    letter-spacing: 1px; /* Reduced from 1px */
-    padding: 0 5px; /* Reduced from 10px */
+    font-size: 90px;
+    letter-spacing: 1px;
+    padding: 0 8px;
   }
 }
 

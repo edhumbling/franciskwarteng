@@ -100,9 +100,7 @@ export default function Footer() {
 
       {/* Infinite Scrolling Text */}
       <div className="infinite-scroll-container">
-        <div className="infinite-scroll-text">
-          <span>Francis Kwarteng ;</span>
-          <span>Francis Kwarteng ;</span>
+        <div className="infinite-scroll-text" aria-hidden="true">
           <span>Francis Kwarteng ;</span>
           <span>Francis Kwarteng ;</span>
         </div>
