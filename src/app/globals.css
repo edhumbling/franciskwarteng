@@ -565,24 +565,29 @@ a:hover {
   background: #000306;
   border-top: 1px solid rgba(32, 139, 15, 0.2);
   overflow: hidden;
-  padding: 40px 0;
+  padding: 60px 0;
   position: relative;
+  width: 100%;
 }
 
 .infinite-scroll-text {
   display: flex;
   white-space: nowrap;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 15s linear infinite;
+  will-change: transform;
 }
 
 .infinite-scroll-text span {
   font-family: 'Micholate', 'Amazon Ember', sans-serif;
   font-size: 360px;
+  line-height: 1;
   font-weight: normal;
   color: #ffffff;
-  letter-spacing: 60px;
-  padding: 0 80px;
+  letter-spacing: 20px;
+  padding: 0 120px;
   text-transform: none;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 @keyframes scroll-left {
@@ -601,9 +606,14 @@ a:hover {
     gap: 40px;
   }
   
+  .infinite-scroll-container {
+    padding: 50px 0;
+  }
+  
   .infinite-scroll-text span {
     font-size: 240px;
-    letter-spacing: 50px;
+    letter-spacing: 15px;
+    padding: 0 100px;
   }
 }
 
@@ -629,13 +639,13 @@ a:hover {
   }
   
   .infinite-scroll-container {
-    padding: 30px 0;
+    padding: 40px 0;
   }
   
   .infinite-scroll-text span {
     font-size: 180px;
-    letter-spacing: 40px;
-    padding: 0 60px;
+    letter-spacing: 12px;
+    padding: 0 80px;
   }
   
   /* Better iframe viewing on mobile */
