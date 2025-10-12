@@ -67,6 +67,9 @@ export default function NavigationBar() {
               </div>
             </Link>
 
+            {/* Spacer for mobile */}
+            <div className="flex-grow md:hidden"></div>
+
             {/* Desktop Navigation - Positioned on the right */}
             <nav className="hidden md:flex items-center gap-3 ml-auto">
               {navLinks.map(({ href, label }) => (
