@@ -70,8 +70,8 @@ export default function NavigationBar() {
             {/* Spacer for mobile */}
             <div className="flex-grow md:hidden"></div>
 
-            {/* Desktop Navigation - Spaced from middle to far end */}
-            <nav className="hidden md:flex items-center justify-center flex-1 gap-6">
+            {/* Desktop Navigation - Far right */}
+            <nav className="hidden md:flex items-center gap-3 ml-auto">
               {navLinks.map(({ href, label }) => (
                 <Link
                   key={href}
