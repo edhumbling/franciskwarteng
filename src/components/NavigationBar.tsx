@@ -67,6 +67,9 @@ export default function NavigationBar() {
               </div>
             </Link>
 
+            {/* Spacer for mobile */}
+            <div className="flex-grow md:hidden"></div>
+
             {/* Desktop Navigation - Far right */}
             <nav className="hidden md:flex items-center gap-3 ml-auto">
               {navLinks.map(({ href, label }) => (
@@ -87,7 +90,7 @@ export default function NavigationBar() {
 
             {/* Hamburger Menu Button - Mobile Only */}
             <button
-              className="hamburger-button md:hidden"
+              className="flex md:hidden hamburger-button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
