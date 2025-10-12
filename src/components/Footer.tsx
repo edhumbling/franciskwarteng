@@ -19,25 +19,26 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Column 2: Navigation */}
+            {/* Column 2: Explore */}
             <div className="footer-column">
-              <h4 className="footer-column-title">Navigation</h4>
+              <h4 className="footer-column-title">Explore</h4>
               <ul className="footer-links-list">
                 <li><Link href="/" className="footer-link-item">Home</Link></li>
                 <li><Link href="/about" className="footer-link-item">About</Link></li>
                 <li><Link href="/research" className="footer-link-item">Research</Link></li>
                 <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
+                <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
+                <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
               </ul>
             </div>
 
-            {/* Column 3: More Links */}
+            {/* Column 3: Highlights */}
             <div className="footer-column">
-              <h4 className="footer-column-title">More</h4>
+              <h4 className="footer-column-title">Highlights</h4>
               <ul className="footer-links-list">
-                <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
-                <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
-                <li><Link href="/index" className="footer-link-item">Site Index</Link></li>
-                <li><Link href="/sitemap" className="footer-link-item">Sitemap</Link></li>
+                <li><Link href="/research" className="footer-link-item">Publications</Link></li>
+                <li><Link href="/essays" className="footer-link-item">Essays & Notes</Link></li>
+                <li><Link href="/projects" className="footer-link-item">Bibinii Farms</Link></li>
               </ul>
             </div>
 

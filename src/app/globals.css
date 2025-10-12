@@ -418,14 +418,30 @@ a:hover {
 
 .footer-content-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 48px;
   margin-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+  .footer-content-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
+  min-width: 0; /* prevent overflow */
 }
 
 .footer-brand-title {
@@ -474,32 +490,30 @@ a:hover {
   color: #e5e5e7;
   font-size: 14px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
   position: relative;
-  padding-left: 0;
+  padding-left: 20px; /* reserve space for indicator */
 }
 
 .footer-link-item::before {
   content: '';
   position: absolute;
-  left: -20px;
+  left: 0; /* safe - no negative offset */
   top: 50%;
   transform: translateY(-50%);
   width: 12px;
   height: 2px;
   background: #208b0f;
-  opacity: 0;
-  transition: all 0.3s ease;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
 }
 
 .footer-link-item:hover {
   color: #ffffff;
-  padding-left: 20px;
 }
 
 .footer-link-item:hover::before {
   opacity: 1;
-  left: 0;
 }
 
 .footer-contact-label {
