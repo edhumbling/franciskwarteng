@@ -605,7 +605,7 @@ a:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Changed to -50% for 2 spans */
+    transform: translateX(-25%); /* Changed to -25% for 4 spans */
   }
 }
 
@@ -621,9 +621,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 180px; /* Reduced from 200px */
-    letter-spacing: 4px; /* Reduced from 8px */
-    padding: 0 15px; /* Reduced from 40px */
+    font-size: 180px; /* Increased 3x from 60px */
+    letter-spacing: 2px; /* Increased from 1px */
+    padding: 0 10px; /* Increased from 5px */
   }
 }
 
@@ -653,9 +653,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 100px; /* Reduced from 80px */
-    letter-spacing: 2px; /* Reduced from 2px */
-    padding: 0 10px; /* Reduced from 15px */
+    font-size: 300px; /* Increased 3x from 100px */
+    letter-spacing: 4px; /* Increased from 2px */
+    padding: 0 20px; /* Increased from 10px */
   }
   
   /* Better iframe viewing on mobile */

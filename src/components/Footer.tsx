@@ -103,6 +103,8 @@ export default function Footer() {
         <div className="infinite-scroll-text">
           <span>Francis Kwarteng ;</span>
           <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
         </div>
       </div>
     </>
