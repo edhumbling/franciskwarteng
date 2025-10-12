@@ -589,8 +589,9 @@ a:hover {
   line-height: 0.9;
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 12px;
-  padding: 0 60px;
+  letter-spacing: 5px;
+  padding: 0 20px;
+  box-sizing: border-box; /* Ensure padding is included */
   text-transform: none;
   display: inline-block;
   flex-shrink: 0;
@@ -604,7 +605,7 @@ a:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* Changed to -50% for 2 spans */
   }
 }
 
@@ -620,9 +621,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 200px;
-    letter-spacing: 8px;
-    padding: 0 40px;
+    font-size: 180px; /* Reduced from 200px */
+    letter-spacing: 4px; /* Reduced from 8px */
+    padding: 0 15px; /* Reduced from 40px */
   }
 }
 
@@ -652,9 +653,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 80px;
-    letter-spacing: 2px;
-    padding: 0 15px;
+    font-size: 100px; /* Reduced from 80px */
+    letter-spacing: 2px; /* Reduced from 2px */
+    padding: 0 10px; /* Reduced from 15px */
   }
   
   /* Better iframe viewing on mobile */
@@ -669,9 +670,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 60px;
-    letter-spacing: 1px;
-    padding: 0 10px;
+    font-size: 60px; /* Reduced from 60px */
+    letter-spacing: 1px; /* Reduced from 1px */
+    padding: 0 5px; /* Reduced from 10px */
   }
 }
 

@@ -90,7 +90,7 @@ export default function NavigationBar() {
 
             {/* Hamburger Menu Button - Mobile Only */}
             <button
-              className="flex md:hidden hamburger-button"
+              className="md:hidden hamburger-button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
