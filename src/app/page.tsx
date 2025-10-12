@@ -2,6 +2,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
+  const heroImages = [
+    { src: "https://ik.imagekit.io/humbling/38d5577a-97f7-4455-b601-ae90e1c05fe6.png", alt: "Laboratory instrumentation montage" },
+    { src: "https://ik.imagekit.io/humbling/78bd19d5-9fd3-49ee-9e92-d796d2906886.png", alt: "Clinical diagnostics workflow" },
+    { src: "https://ik.imagekit.io/humbling/596e0af0-eced-4228-9153-ba5dec3ec174.png", alt: "Microscopy research collage" },
+    { src: "https://ik.imagekit.io/humbling/0d3a9746-2bc4-4e35-9545-4606d6e79fb0.png", alt: "Biomedical innovation visuals" },
+    { src: "https://ik.imagekit.io/humbling/d01cc8f4-1142-4c34-93b2-62dddc0640ed.png", alt: "Molecular analytics interface" },
+    { src: "https://ik.imagekit.io/humbling/c5c8b27f-2b3e-45c5-87a3-b29cf372092d.png", alt: "Genomic sequencing concept" },
+    { src: "https://ik.imagekit.io/humbling/a90d922f-a4e1-4f26-a30c-7d1cc93dc763.png", alt: "Precision medicine dashboard" },
+    { src: "https://ik.imagekit.io/humbling/a90d922f-a4e1-4f26-a30c-7d1cc93dc763.png", alt: "Precision medicine dashboard detail" },
+    { src: "https://ik.imagekit.io/humbling/f8ad32d4-ab8c-4f96-a665-4e7d264a7339.png", alt: "Clinical data synergy" },
+    { src: "https://ik.imagekit.io/humbling/d9ed33a2-aa00-4591-87ca-6029afbb7e92.png", alt: "Translational research pipeline" }
+  ];
   return (
     <div>
       {/* Hero Section */}
@@ -42,6 +54,19 @@ export default function Home() {
               <Image src="/photo.jpeg" alt="Francis Kwarteng" fill className="object-cover" priority />
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Hero Carousel */}
+      <div className="hero-carousel-wrapper" aria-hidden="true">
+        <div className="hero-carousel-track">
+          {heroImages.map((image, index) => (
+            <div className="hero-carousel-segment" key={index}>
+              <div className="hero-carousel-item">
+                <img src={image.src} alt={image.alt} />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
