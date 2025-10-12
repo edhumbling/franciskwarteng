@@ -14,6 +14,25 @@ export default function Home() {
     { src: "https://ik.imagekit.io/humbling/f8ad32d4-ab8c-4f96-a665-4e7d264a7339.png", alt: "Clinical data synergy" },
     { src: "https://ik.imagekit.io/humbling/d9ed33a2-aa00-4591-87ca-6029afbb7e92.png", alt: "Translational research pipeline" }
   ];
+
+  const stats = [
+    {
+      value: '1.2K+',
+      label: 'Critical Transfusions Safeguarded',
+      background: "https://ik.imagekit.io/humbling/aaf6a897-aa61-4aa6-946d-75467ec3d28f.png"
+    },
+    {
+      value: '7',
+      label: 'Research Discoveries',
+      background: "https://ik.imagekit.io/humbling/4d195c4b-0b7f-40b7-9c6c-c9c629d35ebd.png"
+    },
+    {
+      value: '20+',
+      label: 'Lab Techniques Optimized',
+      background: "https://ik.imagekit.io/humbling/8c6dfb86-1cfd-41cf-8b46-d0b466e59640.png"
+    }
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -58,13 +77,21 @@ export default function Home() {
       </div>
 
       {/* Hero Carousel */}
-      <div className="hero-carousel-wrapper" aria-hidden="true">
+      <div className="hero-carousel-wrapper">
         <div className="hero-carousel-track">
-          {heroImages.map((image, index) => (
-            <div className="hero-carousel-segment" key={index}>
-              <div className="hero-carousel-item">
-                <img src={image.src} alt={image.alt} />
-              </div>
+          {Array.from({ length: 2 }).map((_, dup) => (
+            <div className="hero-carousel-segment" key={dup}>
+              {heroImages.map(({ src, alt }, index) => (
+                <a
+                  key={`${dup}-${index}`}
+                  href={src}
+            target="_blank"
+            rel="noopener noreferrer"
+                  className="hero-carousel-item"
+                >
+                  <img src={src} alt={alt} loading="lazy" />
+                </a>
+              ))}
             </div>
           ))}
         </div>
@@ -72,24 +99,19 @@ export default function Home() {
 
       {/* Stats */}
       <div className="amazon-grid amazon-grid-3" style={{ marginBottom: "40px" }}>
-        <div className="amazon-card">
-          <div className="amazon-stat">
-            <span className="amazon-stat-value">1.2K+</span>
-            <span className="amazon-stat-label">Critical Transfusions Safeguarded</span>
+        {stats.map(({ value, label, background }) => (
+          <div
+            key={label}
+            className="stat-card"
+            style={{ backgroundImage: `url(${background})` }}
+          >
+            <div className="stat-card-overlay"></div>
+            <div className="stat-card-content">
+              <span className="amazon-stat-value">{value}</span>
+              <span className="amazon-stat-label">{label}</span>
+            </div>
           </div>
-        </div>
-        <div className="amazon-card">
-          <div className="amazon-stat">
-            <span className="amazon-stat-value">7</span>
-            <span className="amazon-stat-label">Research Discoveries</span>
-          </div>
-        </div>
-        <div className="amazon-card">
-          <div className="amazon-stat">
-            <span className="amazon-stat-value">20+</span>
-            <span className="amazon-stat-label">Lab Techniques Optimized</span>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Current Position */}

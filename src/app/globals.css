@@ -940,7 +940,7 @@ footer {
   border-top: 2px solid rgba(32, 139, 15, 0.4);
   position: relative;
   margin-top: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 32px;
 }
 
 .signature-footer-stripes {
@@ -1175,38 +1175,45 @@ footer {
   width: 100%;
   overflow: hidden;
   margin: 10px 0 48px;
-  padding: 20px 0;
-  background: linear-gradient(90deg, rgba(32,139,15,0.08), transparent 20%, transparent 80%, rgba(32,139,15,0.08));
+  padding: 16px 0;
+  background: linear-gradient(90deg, rgba(32,139,15,0.06), transparent 25%, transparent 75%, rgba(32,139,15,0.06));
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
 }
 
 .hero-carousel-track {
   display: flex;
   width: max-content;
-  animation: hero-carousel-scroll 40s linear infinite;
-  gap: 40px;
+  animation: hero-carousel-scroll 38s linear infinite;
 }
 
 .hero-carousel-segment {
   display: flex;
-  gap: 40px;
 }
 
 .hero-carousel-item {
-  flex: 0 0 clamp(320px, 26vw, 520px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-  border-radius: 20px;
+  flex: 0 0 clamp(280px, 70vw, 460px);
+  margin-right: clamp(12px, 4vw, 36px);
+  border-radius: 24px;
+  overflow: hidden;
   border: 1px solid rgba(32, 139, 15, 0.35);
-  background: rgba(0, 3, 6, 0.65);
+  background: rgba(0, 3, 6, 0.75);
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-carousel-item:last-child {
+  margin-right: 0;
+}
+
+.hero-carousel-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
 }
 
 .hero-carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -1221,19 +1228,42 @@ footer {
 
 @media (max-width: 768px) {
   .hero-carousel-wrapper {
-    margin: 10px 0 36px;
-    padding: 16px 0;
+    padding: 12px 0;
+    margin: 8px 0 32px;
   }
   .hero-carousel-track {
-    animation-duration: 32s;
-    gap: 28px;
-  }
-  .hero-carousel-segment {
-    gap: 28px;
+    animation-duration: 30s;
   }
   .hero-carousel-item {
-    flex-basis: clamp(240px, 80vw, 360px);
-    padding: 10px;
+    flex-basis: clamp(240px, 82vw, 320px);
+    margin-right: clamp(10px, 3vw, 24px);
   }
+}
+
+.stat-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,3,6,0.75), rgba(0,3,6,0.85));
+}
+
+.stat-card-content {
+  position: relative;
+  text-align: center;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
