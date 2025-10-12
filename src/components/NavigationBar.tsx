@@ -104,12 +104,12 @@ export default function NavigationBar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''} md:hidden`}
         onClick={closeMobileMenu}
       />
 
       {/* Mobile Menu - Full Screen Black Glass */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''} md:hidden`}>
         {/* Menu Header */}
         <div className="mobile-menu-header">
           <div className="flex items-center gap-3">
