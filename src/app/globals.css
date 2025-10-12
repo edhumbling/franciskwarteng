@@ -1204,15 +1204,18 @@ footer {
   display: flex;
   width: max-content;
   animation: hero-carousel-scroll 36s linear infinite;
+  gap: 0;
 }
 
 .hero-carousel-segment {
   display: flex;
+  gap: 0;
 }
 
 .hero-carousel-item {
-  flex: 0 0 clamp(280px, 70vw, 460px);
-  margin-right: clamp(12px, 4vw, 36px);
+  flex: 0 0 clamp(300px, 75vw, 520px);
+  aspect-ratio: 16 / 9;
+  margin-right: 0;
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid rgba(32, 139, 15, 0.35);
@@ -1256,8 +1259,8 @@ footer {
     animation-duration: 28s;
   }
   .hero-carousel-item {
-    flex-basis: clamp(240px, 82vw, 320px);
-    margin-right: clamp(10px, 3vw, 24px);
+    flex-basis: clamp(260px, 88vw, 360px);
+    aspect-ratio: 4 / 3;
   }
   .hero-carousel-wrapper::before,
   .hero-carousel-wrapper::after {
