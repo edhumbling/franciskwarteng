@@ -22,7 +22,7 @@ export default function Home() {
               Biomedical Scientist focused on elucidating molecular mechanisms of physiological and pathological pathways with the aim of finding novel treatments for both infectious and metabolic diseases.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/projects" className="amazon-button-primary amazon-button">
+              <Link href="/research" className="amazon-button-primary amazon-button">
                 View Research
               </Link>
               <Link href="/contact" className="amazon-button">
@@ -99,8 +99,8 @@ export default function Home() {
           <p className="text-secondary" style={{ fontSize: "14px", marginBottom: "20px", lineHeight: "1.6" }}>
             My current project involves the use of affinity chromatography pull-down assay to characterize the protein-protein interaction in translation initiation of the parasite Giardia lamblia. By understanding the molecular mechanism of translation initiation of the parasite, I may find a drug target selectively toxic to the parasite.
           </p>
-          <Link href="/projects" className="amazon-button">
-            Explore Research Projects →
+          <Link href="/research" className="amazon-button">
+            Explore Research Publications →
           </Link>
         </div>
       </div>

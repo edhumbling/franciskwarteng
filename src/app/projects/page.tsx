@@ -124,53 +124,6 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      {/* Website Preview Section */}
-      <div className="amazon-card" style={{ padding: '0', overflow: 'hidden', minHeight: '1000px', marginBottom: '40px', background: '#1a1a1a' }}>
-        <div style={{ padding: '20px', borderBottom: '1px solid rgba(32, 139, 15, 0.2)', background: '#000306' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-            <div>
-              <h3 style={{ fontSize: '20px', color: '#ffffff', marginBottom: '4px' }}>🌐 Live Website Preview</h3>
-              <p className="text-secondary" style={{ fontSize: '14px' }}>
-                Interactive preview of BibiniFarms.com platform
-              </p>
-            </div>
-            <a 
-              href="https://bibinifarms.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                color: '#208b0f',
-                fontSize: '13px',
-                textDecoration: 'none',
-                padding: '8px 16px',
-                border: '1px solid rgba(32, 139, 15, 0.4)',
-                borderRadius: '6px',
-                transition: 'all 0.3s ease',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px'
-              }}
-            >
-              Visit Full Site ↗
-            </a>
-          </div>
-        </div>
-        <div style={{ position: 'relative', width: '100%', height: '1000px', background: '#ffffff' }}>
-          <iframe
-            src="https://bibinifarms.com"
-            style={{
-              width: '100%',
-              height: '100%',
-              border: 'none',
-              display: 'block',
-            }}
-            title="BibiniFarms.com Website"
-            loading="lazy"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-          />
-        </div>
-      </div>
-
       {/* Additional Info */}
       <div className="amazon-card-elevated" style={{ padding: '40px', textAlign: 'center' }}>
         <h2 style={{ fontSize: '28px', marginBottom: '16px' }}>Interested in Collaboration?</h2>

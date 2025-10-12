@@ -2,37 +2,113 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="apple-footer">
-      <div className="apple-footer-container">
-        {/* Title */}
-        <h3 className="footer-title">Francis Kwarteng</h3>
-        
-        {/* Navigation Links */}
-        <div className="footer-links-section">
-          <Link href="/" className="footer-link">Home</Link>
-          <Link href="/about" className="footer-link">About</Link>
-          <Link href="/research" className="footer-link">Research</Link>
-          <Link href="/projects" className="footer-link">Projects</Link>
-          <Link href="/essays" className="footer-link">Essays</Link>
-          <Link href="/contact" className="footer-link">Contact</Link>
+    <>
+      <footer className="majestic-footer">
+        <div className="majestic-footer-container">
+          {/* Main Footer Content */}
+          <div className="footer-content-grid">
+            {/* Column 1: Brand */}
+            <div className="footer-column">
+              <h3 className="footer-brand-title">Francis Kwarteng</h3>
+              <p className="footer-brand-subtitle">BS MLS (ASCPi), MS</p>
+              <p className="footer-brand-description">
+                Biomedical Scientist | NYU Langone Health
+              </p>
+              <p className="footer-brand-description" style={{ marginTop: '12px' }}>
+                Bronx, New York
+              </p>
+            </div>
+
+            {/* Column 2: Navigation */}
+            <div className="footer-column">
+              <h4 className="footer-column-title">Navigation</h4>
+              <ul className="footer-links-list">
+                <li><Link href="/" className="footer-link-item">Home</Link></li>
+                <li><Link href="/about" className="footer-link-item">About</Link></li>
+                <li><Link href="/research" className="footer-link-item">Research</Link></li>
+                <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 3: More Links */}
+            <div className="footer-column">
+              <h4 className="footer-column-title">More</h4>
+              <ul className="footer-links-list">
+                <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
+                <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
+                <li><Link href="/index" className="footer-link-item">Site Index</Link></li>
+                <li><Link href="/sitemap" className="footer-link-item">Sitemap</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 4: Connect */}
+            <div className="footer-column">
+              <h4 className="footer-column-title">Connect</h4>
+              <ul className="footer-links-list">
+                <li>
+                  <a href="mailto:kwartengfo@warhawks.ulm.edu" className="footer-link-item">
+                    Email
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="footer-link-item"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+              <div style={{ marginTop: '24px' }}>
+                <p className="footer-contact-label">Email:</p>
+                <a 
+                  href="mailto:kwartengfo@warhawks.ulm.edu" 
+                  className="footer-contact-email"
+                >
+                  kwartengfo@warhawks.ulm.edu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="footer-majestic-divider"></div>
+
+          {/* Bottom Section */}
+          <div className="footer-bottom-section">
+            <div className="footer-bottom-left">
+              <p className="footer-copyright">
+                © {new Date().getFullYear()} Francis Kwarteng. All rights reserved.
+              </p>
+              <p className="footer-tagline">
+                Advancing molecular medicine through precision laboratory science
+              </p>
+            </div>
+            <div className="footer-bottom-right">
+              <p className="footer-location">
+                🏥 NYU Langone Health
+              </p>
+              <p className="footer-location">
+                📍 Bronx, New York, United States
+              </p>
+            </div>
+          </div>
         </div>
-        
-        {/* Divider */}
-        <div className="footer-divider"></div>
-        
-        {/* Bottom Section */}
-        <div className="footer-bottom">
-          <div className="footer-contact">
-            Contact: <a href="mailto:kwartengfo@warhawks.ulm.edu">kwartengfo@warhawks.ulm.edu</a>
-          </div>
-          <div className="footer-copyright">
-            © {new Date().getFullYear()} Francis Kwarteng. All rights reserved.
-          </div>
-          <div className="footer-copyright">
-            Biomedical Scientist | NYU Langone Health
-          </div>
+      </footer>
+
+      {/* Infinite Scrolling Text */}
+      <div className="infinite-scroll-container">
+        <div className="infinite-scroll-text">
+          <span>FRANCIS KWARTENG</span>
+          <span>FRANCIS KWARTENG</span>
+          <span>FRANCIS KWARTENG</span>
+          <span>FRANCIS KWARTENG</span>
+          <span>FRANCIS KWARTENG</span>
+          <span>FRANCIS KWARTENG</span>
         </div>
       </div>
-    </footer>
+    </>
   );
 }

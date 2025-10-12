@@ -120,7 +120,11 @@ export default function ResearchPage() {
             </div>
             <div style={{ position: 'relative', width: '100%', height: '1000px', background: '#2a2a2a' }}>
               <iframe
-                src={`${paper.pdfUrl}#view=FitH&toolbar=1&navpanes=1&scrollbar=1`}
+                src={
+                  paper.type === 'Thesis' 
+                    ? `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(paper.pdfUrl)}`
+                    : `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(paper.pdfUrl)}`
+                }
                 style={{
                   width: '100%',
                   height: '100%',
