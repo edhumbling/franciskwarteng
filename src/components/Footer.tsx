@@ -103,16 +103,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-
-      {/* Innovative Single‑Lane Glass Ticker (Amazon font) */}
-      <div className="glass-ticker" aria-hidden="true">
-        <div className="glass-ticker-lane">
-          <div className="glass-ticker-track">
-            <span>Francis Kwarteng ;</span>
-            <span>Francis Kwarteng ;</span>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

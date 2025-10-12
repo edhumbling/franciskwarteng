@@ -940,6 +940,7 @@ footer {
   border-top: 2px solid rgba(32, 139, 15, 0.4);
   position: relative;
   margin-top: 120px;
+  padding-bottom: 80px;
 }
 
 .signature-footer-stripes {
@@ -1157,9 +1158,10 @@ footer {
 }
 
 .signature-footer-art {
-  margin: 40px 0 20px;
+  margin: 50px auto 40px;
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .signature-footer-art img {
