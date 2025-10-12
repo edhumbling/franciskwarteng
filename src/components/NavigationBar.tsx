@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/research", label: "Research" },
   { href: "/projects", label: "Projects" },
   { href: "/essays", label: "Essays" },
   { href: "/contact", label: "Contact" },
@@ -66,8 +67,11 @@ export default function NavigationBar() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-2">
+            {/* Spacer for mobile */}
+            <div className="flex-grow md:hidden"></div>
+
+            {/* Desktop Navigation - Positioned on the right */}
+            <nav className="hidden md:flex items-center gap-1 ml-auto">
               {navLinks.map(({ href, label }) => (
                 <Link
                   key={href}
@@ -80,9 +84,9 @@ export default function NavigationBar() {
               ))}
             </nav>
 
-            {/* Hamburger Menu Button */}
+            {/* Hamburger Menu Button - Mobile Only */}
             <button
-              className="hamburger-button lg:hidden"
+              className="hamburger-button md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >

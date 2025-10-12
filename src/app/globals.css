@@ -470,6 +470,11 @@ a:hover {
   .footer-link {
     font-size: 13px;
   }
+  
+  /* Better iframe viewing on mobile */
+  iframe {
+    min-height: 600px !important;
+  }
 }
 
 /* Timeline */
