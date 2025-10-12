@@ -573,8 +573,9 @@ a:hover {
 .infinite-scroll-text {
   display: flex;
   white-space: nowrap;
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-left 20s linear infinite;
   will-change: transform;
+  width: max-content;
 }
 
 .infinite-scroll-text span {
@@ -583,11 +584,12 @@ a:hover {
   line-height: 1;
   font-weight: normal;
   color: #ffffff;
-  letter-spacing: 20px;
-  padding: 0 120px;
+  letter-spacing: 8px;
+  padding: 0 40px;
   text-transform: none;
   display: inline-block;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 @keyframes scroll-left {
@@ -595,7 +597,7 @@ a:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -611,9 +613,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 240px;
-    letter-spacing: 15px;
-    padding: 0 100px;
+    font-size: 200px;
+    letter-spacing: 6px;
+    padding: 0 30px;
   }
 }
 
@@ -643,14 +645,22 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 180px;
-    letter-spacing: 12px;
-    padding: 0 80px;
+    font-size: 120px;
+    letter-spacing: 4px;
+    padding: 0 20px;
   }
   
   /* Better iframe viewing on mobile */
   iframe {
     min-height: 600px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .infinite-scroll-text span {
+    font-size: 80px;
+    letter-spacing: 3px;
+    padding: 0 15px;
   }
 }
 
