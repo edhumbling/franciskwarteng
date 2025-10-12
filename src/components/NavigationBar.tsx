@@ -15,12 +15,26 @@ const navLinks = [
 
 export default function NavigationBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileMenuOpen]);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -53,8 +67,8 @@ export default function NavigationBar() {
               </div>
             </Link>
 
-            {/* Navigation - All Devices */}
-            <nav className="flex items-center gap-3 ml-auto">
+            {/* Desktop Navigation - Positioned on the right */}
+            <nav className="hidden md:flex items-center gap-3 ml-auto">
               {navLinks.map(({ href, label }) => (
                 <Link
                   key={href}
@@ -70,9 +84,107 @@ export default function NavigationBar() {
                 </Link>
               ))}
             </nav>
+
+            {/* Hamburger Menu Button - Mobile Only */}
+            <button
+              className="hamburger-button md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+            </button>
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}
+        onClick={closeMobileMenu}
+      />
+
+      {/* Mobile Menu - Full Screen Black Glass */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        {/* Menu Header */}
+        <div className="mobile-menu-header">
+          <div className="flex items-center gap-3">
+            <div className="relative h-12 w-12 overflow-hidden rounded-full border-2" style={{ borderColor: '#208b0f' }}>
+              <Image
+                src="/photo.jpeg"
+                alt="Francis Kwarteng"
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-base font-semibold" style={{ color: '#ffffff' }}>Francis Kwarteng</p>
+              <p className="text-xs" style={{ color: '#a1a1a6' }}>Biomedical Scientist</p>
+            </div>
+          </div>
+          <button
+            className="mobile-menu-close"
+            onClick={closeMobileMenu}
+            aria-label="Close menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Menu Navigation - Large Apple-style Links */}
+        <nav className="mobile-menu-nav">
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="mobile-menu-link"
+              onClick={closeMobileMenu}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Menu Footer */}
+        <div className="mobile-menu-footer">
+          <p className="text-xs mb-4 uppercase tracking-wider" style={{ color: '#a1a1a6' }}>Connect</p>
+          <div className="flex flex-col gap-3">
+            <a
+              href="mailto:kwartengfo@warhawks.ulm.edu"
+              className="text-sm transition-colors"
+              style={{ color: '#e5e5e7' }}
+              onClick={closeMobileMenu}
+            >
+              kwartengfo@warhawks.ulm.edu
+            </a>
+            <a
+              href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab"
+              className="text-sm transition-colors"
+              style={{ color: '#e5e5e7' }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn Profile →
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
