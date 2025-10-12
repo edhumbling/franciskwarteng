@@ -1117,6 +1117,20 @@ footer {
   font-size: 13px;
 }
 
+.signature-footer-crafted {
+  font-size: 11px;
+  color: rgba(229, 229, 231, 0.6);
+}
+
+.signature-footer-crafted a {
+  color: rgba(229, 229, 231, 0.8);
+  text-decoration: none;
+}
+
+.signature-footer-crafted a:hover {
+  color: #2bad12;
+}
+
 @media (max-width: 1000px) {
   .signature-footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1140,5 +1154,17 @@ footer {
   .signature-footer-brand {
     grid-column: span 1;
   }
+}
+
+.signature-footer-art {
+  margin: 40px 0 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.signature-footer-art img {
+  display: block;
+  width: min(900px, 100%);
+  opacity: 0.8;
 }
 

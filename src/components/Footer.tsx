@@ -85,6 +85,10 @@ export default function Footer() {
             </div>
           </div>
 
+          <div className="signature-footer-art" aria-hidden="true">
+            <img src="/footer-pixels-xl.svg" alt="" />
+          </div>
+
           <div className="signature-footer-divider" aria-hidden="true"></div>
 
           <div className="signature-footer-bottom">
@@ -93,6 +97,9 @@ export default function Footer() {
               <Link href="/sitemap" className="signature-footer-link">Sitemap</Link>
               <Link href="/index" className="signature-footer-link">Index</Link>
             </div>
+            <p className="signature-footer-crafted">
+              Built with love ❤️ by <a href="https://linkedin.com/in/edhumbling" target="_blank" rel="noopener noreferrer">AIDEL</a>
+            </p>
           </div>
         </div>
       </footer>
