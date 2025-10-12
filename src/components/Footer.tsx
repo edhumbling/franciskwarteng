@@ -7,38 +7,34 @@ export default function Footer() {
         <div className="majestic-footer-container">
           {/* Main Footer Content */}
           <div className="footer-content-grid">
-            {/* Left Group: Brand + Explore */}
-            <div className="footer-column">
-              {/* Brand */}
-              <div className="footer-column" style={{ marginBottom: '28px' }}>
-                <h3 className="footer-brand-title">Francis Kwarteng</h3>
-                <p className="footer-brand-subtitle">BS MLS (ASCPi), MS</p>
-                <p className="footer-brand-description">
-                  Biomedical Scientist | NYU Langone Health
-                </p>
-                <p className="footer-brand-description" style={{ marginTop: '12px' }}>
-                  Bronx, New York
-                </p>
-              </div>
-
-              {/* Explore */}
-              <div className="footer-column">
-                <h4 className="footer-column-title">Explore</h4>
-                <ul className="footer-links-list">
-                  <li><Link href="/" className="footer-link-item">Home</Link></li>
-                  <li><Link href="/about" className="footer-link-item">About</Link></li>
-                  <li><Link href="/research" className="footer-link-item">Research</Link></li>
-                  <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
-                  <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
-                  <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
-                </ul>
-              </div>
+            {/* Brand Column */}
+            <div className="footer-brand-column">
+              <h3 className="footer-brand-title">Francis Kwarteng</h3>
+              <p className="footer-brand-subtitle">BS MLS (ASCPi), MS</p>
+              <p className="footer-brand-description">
+                Biomedical Scientist | NYU Langone Health
+              </p>
+              <p className="footer-brand-description" style={{ marginTop: '12px' }}>
+                Bronx, New York
+              </p>
             </div>
 
-            {/* Right Group: Highlights + Connect */}
+            {/* Explore Column */}
             <div className="footer-column">
-              {/* Highlights */}
-              <div className="footer-column" style={{ marginBottom: '28px' }}>
+              <h4 className="footer-column-title">Explore</h4>
+              <ul className="footer-links-list">
+                <li><Link href="/" className="footer-link-item">Home</Link></li>
+                <li><Link href="/about" className="footer-link-item">About</Link></li>
+                <li><Link href="/research" className="footer-link-item">Research</Link></li>
+                <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
+                <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
+                <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
+              </ul>
+            </div>
+
+            {/* Highlights + Connect Column */}
+            <div className="footer-column footer-column-stacked">
+              <div className="footer-subgroup">
                 <h4 className="footer-column-title">Highlights</h4>
                 <ul className="footer-links-list">
                   <li><Link href="/research" className="footer-link-item">Publications</Link></li>
@@ -47,8 +43,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Connect */}
-              <div className="footer-column">
+              <div className="footer-subgroup">
                 <h4 className="footer-column-title">Connect</h4>
                 <ul className="footer-links-list">
                   <li>
@@ -67,7 +62,7 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-                <div style={{ marginTop: '24px' }}>
+                <div className="footer-contact-block">
                   <p className="footer-contact-label">Email:</p>
                   <a 
                     href="mailto:kwartengfo@warhawks.ulm.edu" 
