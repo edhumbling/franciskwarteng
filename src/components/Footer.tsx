@@ -98,11 +98,19 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Infinite Scrolling Text */}
-      <div className="infinite-scroll-container">
-        <div className="infinite-scroll-text" aria-hidden="true">
-          <span>Francis Kwarteng ;</span>
-          <span>Francis Kwarteng ;</span>
+      {/* Innovative Dual‑Lane Glass Ticker */}
+      <div className="glass-ticker" aria-hidden="true">
+        <div className="glass-ticker-lane">
+          <div className="glass-ticker-track">
+            <span>Francis Kwarteng ;</span>
+            <span>Francis Kwarteng ;</span>
+          </div>
+        </div>
+        <div className="glass-ticker-lane glass-ticker-lane--reverse">
+          <div className="glass-ticker-track">
+            <span>Francis Kwarteng ;</span>
+            <span>Francis Kwarteng ;</span>
+          </div>
         </div>
       </div>
     </>

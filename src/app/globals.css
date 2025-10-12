@@ -562,43 +562,85 @@ a:hover {
   margin-bottom: 8px;
 }
 
-/* Infinite Scrolling Text - Overhauled */
-.infinite-scroll-container {
-  background: #000306;
-  border-top: 1px solid rgba(32, 139, 15, 0.2);
-  overflow: hidden;
-  padding: 60px 0;
+/* Glass Ticker - Dual Lane */
+.glass-ticker {
   position: relative;
   width: 100%;
+  background: linear-gradient(180deg, rgba(0,3,6,0.9), rgba(0,3,6,1));
+  border-top: 1px solid rgba(32,139,15,0.25);
+  padding: 36px 0;
+  overflow: hidden;
 }
 
-.infinite-scroll-text {
+.glass-ticker::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(60% 40% at 50% 0%, rgba(32,139,15,0.12), transparent 60%);
+}
+
+.glass-ticker-lane {
+  position: relative;
   display: flex;
-  white-space: nowrap;
-  will-change: transform;
+  align-items: center;
+  gap: 24px;
+  padding: 6px 0;
+}
+
+.glass-ticker-lane + .glass-ticker-lane {
+  margin-top: 8px;
+}
+
+.glass-ticker-track {
+  display: flex;
   width: max-content;
-  animation: scroll-left 12s linear infinite;
-}
-
-.infinite-scroll-text span {
-  font-family: 'Micholate', 'Inter', 'Amazon Ember', sans-serif;
-  font-size: 360px;
-  line-height: 0.9;
-  font-weight: 900;
-  color: #ffffff;
-  letter-spacing: 6px;
-  padding: 0 24px;
-  display: inline-block;
-  flex-shrink: 0;
   white-space: nowrap;
-  text-shadow: 0 0 30px rgba(32, 139, 15, 0.35);
-  transform: translateZ(0);
+  animation: ticker-left 14s linear infinite;
 }
 
-/* With exactly two spans, move by -50% for a seamless loop */
-@keyframes scroll-left {
+.glass-ticker-lane--reverse .glass-ticker-track {
+  animation-name: ticker-right;
+}
+
+.glass-ticker-track span {
+  font-family: 'Micholate', 'Inter', 'Amazon Ember', sans-serif;
+  font-size: 220px;
+  font-weight: 900;
+  line-height: 0.9;
+  color: #fff;
+  letter-spacing: 4px;
+  padding: 0 20px;
+  text-shadow: 0 0 30px rgba(32,139,15,0.35);
+  opacity: 0.95;
+}
+
+@keyframes ticker-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes ticker-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 1024px) {
+  .glass-ticker { padding: 28px 0; }
+  .glass-ticker-track { animation-duration: 12s; }
+  .glass-ticker-track span { font-size: 150px; letter-spacing: 3px; padding: 0 14px; }
+}
+
+@media (max-width: 768px) {
+  .glass-ticker { padding: 24px 0; }
+  .glass-ticker-track { animation-duration: 10s; }
+  .glass-ticker-track span { font-size: 110px; letter-spacing: 2px; padding: 0 10px; }
+}
+
+@media (max-width: 480px) {
+  .glass-ticker { padding: 20px 0; }
+  .glass-ticker-track { animation-duration: 9s; }
+  .glass-ticker-track span { font-size: 88px; letter-spacing: 1px; padding: 0 8px; }
 }
 
 /* Desktop hard guards to ensure hamburger never shows */

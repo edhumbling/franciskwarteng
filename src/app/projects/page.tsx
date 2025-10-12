@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Projects - Francis Kwarteng',
-  description: 'Professional projects by Francis Kwarteng, including BibiniFarms.com agricultural initiative.',
-  keywords: 'Francis Kwarteng, Projects, BibiniFarms, Agriculture, Ghana, Farming',
+  description: 'Professional projects by Francis Kwarteng, including Bibinii Farms — a Ghanaian farmer-powered fresh egg network.',
+  keywords: 'Francis Kwarteng, Projects, Bibinii Farms, Ghana, Eggs, Agriculture, Farmer Network, Delivery',
 };
 
 export default function ProjectsPage() {
@@ -18,106 +18,89 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      {/* BibiniFarms.com Project */}
+      {/* Bibinii Farms Project */}
       <div className="amazon-card-elevated" style={{ marginBottom: '40px', padding: '40px' }}>
-        <div className="amazon-badge" style={{ marginBottom: '16px' }}>Agricultural Initiative</div>
-        <h2 style={{ fontSize: '32px', marginBottom: '16px', color: '#ffffff' }}>BibiniFarms.com</h2>
+        {/* Top Thumbnail Preview */}
+        <a
+          href="https://bibiniifarms.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: 'block', marginBottom: '20px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(32,139,15,0.3)' }}
+          aria-label="Open Bibinii Farms website in new tab"
+        >
+          <img
+            src="https://image.thum.io/get/width/1600/https://bibiniifarms.com"
+            alt="Bibinii Farms website preview"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+        </a>
+
+        <div className="amazon-badge" style={{ marginBottom: '16px' }}>Farmer-powered fresh eggs</div>
+        <h2 style={{ fontSize: '32px', marginBottom: '16px', color: '#ffffff' }}>Bibinii Farms</h2>
         <h3 style={{ fontSize: '20px', marginBottom: '24px', color: '#208b0f' }}>
-          Sustainable Agriculture & Community Development
+          Fresh Eggs. Ghana Grown. Farmer Powered.
         </h3>
 
-        {/* Project Overview */}
-        <div style={{ marginBottom: '32px' }}>
+        {/* Overview */}
+        <div style={{ marginBottom: '24px' }}>
           <h4 style={{ fontSize: '18px', marginBottom: '12px', color: '#ffffff' }}>Overview</h4>
-          <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>
-            BibiniFarms.com is a private agricultural venture focused on sustainable farming practices and community development in Ghana. 
-            The initiative combines modern agricultural techniques with traditional farming wisdom to create scalable and 
-            sustainable food production systems. As a private enterprise, BibiniFarms operates with a focus on local impact 
-            and sustainable growth, working directly with communities to improve agricultural outcomes and food security.
+          <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.7', marginBottom: '12px' }}>
+            Bibinii Farms connects Ghanaian farmers directly to families, schools, restaurants, and businesses — cutting out
+            middlemen, reducing waste, and making local food affordable and traceable. Customers can order Ghana-grown eggs
+            with doorstep delivery or pickup hubs nationwide.
+          </p>
+          <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.7' }}>
+            The company guarantees freshness (collected, graded, and delivered within hours), pays farmers fairly with
+            transparent pricing and reliable weekly payments, and operates with a sustainability mindset: eco‑friendly crates,
+            zero‑waste practices, and support for community composting.
           </p>
         </div>
 
-        {/* Key Features */}
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '18px', marginBottom: '16px', color: '#ffffff' }}>Key Features</h4>
-          <div className="amazon-grid amazon-grid-2" style={{ gap: '16px' }}>
-            <div className="amazon-card" style={{ padding: '20px' }}>
-              <h5 style={{ fontSize: '16px', marginBottom: '8px', color: '#208b0f' }}>🌱 Sustainable Practices</h5>
-              <p className="text-secondary" style={{ fontSize: '13px', lineHeight: '1.5' }}>
-                Implementation of eco-friendly farming methods that preserve soil health and promote biodiversity
-              </p>
-            </div>
-            <div className="amazon-card" style={{ padding: '20px' }}>
-              <h5 style={{ fontSize: '16px', marginBottom: '8px', color: '#208b0f' }}>🤝 Community Impact</h5>
-              <p className="text-secondary" style={{ fontSize: '13px', lineHeight: '1.5' }}>
-                Creating employment opportunities and supporting local communities through agricultural development
-              </p>
-            </div>
-            <div className="amazon-card" style={{ padding: '20px' }}>
-              <h5 style={{ fontSize: '16px', marginBottom: '8px', color: '#208b0f' }}>🔬 Science-Driven</h5>
-              <p className="text-secondary" style={{ fontSize: '13px', lineHeight: '1.5' }}>
-                Application of scientific principles to optimize crop yields and farming efficiency
-              </p>
-            </div>
-            <div className="amazon-card" style={{ padding: '20px' }}>
-              <h5 style={{ fontSize: '16px', marginBottom: '8px', color: '#208b0f' }}>💡 Innovation</h5>
-              <p className="text-secondary" style={{ fontSize: '13px', lineHeight: '1.5' }}>
-                Integration of modern technology with traditional agricultural knowledge
-              </p>
-            </div>
+        {/* Impact Snapshot */}
+        <div className="amazon-grid amazon-grid-3" style={{ gap: '16px', marginBottom: '24px' }}>
+          <div className="amazon-card" style={{ padding: '20px' }}>
+            <h5 style={{ fontSize: '16px', marginBottom: '6px', color: '#208b0f' }}>🥚 Egg crates sold</h5>
+            <p className="text-secondary" style={{ fontSize: '13px' }}>2,400+ fresh, traceable crates delivered nationwide</p>
+          </div>
+          <div className="amazon-card" style={{ padding: '20px' }}>
+            <h5 style={{ fontSize: '16px', marginBottom: '6px', color: '#208b0f' }}>₵ Income to farmers</h5>
+            <p className="text-secondary" style={{ fontSize: '13px' }}>₵120,000+ paid directly to partner farmers so far</p>
+          </div>
+          <div className="amazon-card" style={{ padding: '20px' }}>
+            <h5 style={{ fontSize: '16px', marginBottom: '6px', color: '#208b0f' }}>⚖️ Fair pay promise</h5>
+            <p className="text-secondary" style={{ fontSize: '13px' }}>6× national average wages paid to employees</p>
           </div>
         </div>
 
-        {/* Project Goals */}
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '18px', marginBottom: '12px', color: '#ffffff' }}>Project Goals</h4>
+        {/* Why it matters */}
+        <div style={{ marginBottom: '24px' }}>
+          <h4 style={{ fontSize: '18px', marginBottom: '12px', color: '#ffffff' }}>Why it matters</h4>
+          <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.7' }}>
+            Bibinii highlights Ghana’s generational love for poultry and livestock — where caring for animals is
+            family tradition, community bonding, and sustainable living passed down for generations. The model strengthens
+            food security while empowering farmers and keeping value in local communities.
+          </p>
+        </div>
+
+        {/* Customer Experience */}
+        <div style={{ marginBottom: '24px' }}>
+          <h4 style={{ fontSize: '18px', marginBottom: '12px', color: '#ffffff' }}>Customer experience</h4>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>
-              Promote sustainable agricultural practices in local communities
-            </li>
-            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>
-              Improve food security through efficient farming methods
-            </li>
-            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>
-              Create economic opportunities for farmers and agricultural workers
-            </li>
-            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>
-              Educate and train the next generation of agricultural professionals
-            </li>
-            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>
-              Develop scalable models for sustainable agriculture
-            </li>
+            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>Doorstep delivery or pickup hubs</li>
+            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>Eggs collected and graded within hours of delivery</li>
+            <li className="amazon-list-bullet" style={{ marginBottom: '8px', color: '#e5e5e7' }}>Transparent pricing and reliable support</li>
           </ul>
         </div>
 
-        {/* Technologies & Methods */}
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '18px', marginBottom: '12px', color: '#ffffff' }}>Technologies & Methods</h4>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-            {['Crop Rotation', 'Organic Farming', 'Water Conservation', 'Soil Management', 'Integrated Pest Management', 'Sustainable Practices'].map((tech, index) => (
-              <span key={index} style={{
-                background: 'rgba(32, 139, 15, 0.15)',
-                color: '#ffffff',
-                padding: '6px 12px',
-                borderRadius: '6px',
-                fontSize: '12px',
-                border: '1px solid rgba(32, 139, 15, 0.4)'
-              }}>
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
+        {/* CTA */}
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', paddingTop: '20px', borderTop: '1px solid rgba(32, 139, 15, 0.2)' }}>
           <a 
-            href="https://bibinifarms.com" 
+            href="https://bibiniifarms.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="amazon-button-primary amazon-button"
           >
-            Visit BibiniFarms.com →
+            Visit BibiniiFarms.com →
           </a>
           <Link href="/contact" className="amazon-button">
             Inquire About Project
