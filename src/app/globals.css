@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Micholate';
+  src: url('/Micholate Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --amazon-bg-base: #000306;
   --amazon-bg-secondary: #000306;
@@ -568,14 +576,13 @@ a:hover {
 }
 
 .infinite-scroll-text span {
-  font-size: 120px;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(32, 139, 15, 0.3);
-  text-stroke: 2px rgba(32, 139, 15, 0.3);
-  letter-spacing: 40px;
-  padding: 0 60px;
-  text-transform: uppercase;
+  font-family: 'Micholate', 'Amazon Ember', sans-serif;
+  font-size: 360px;
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: 60px;
+  padding: 0 80px;
+  text-transform: none;
 }
 
 @keyframes scroll-left {
@@ -595,8 +602,8 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 80px;
-    letter-spacing: 30px;
+    font-size: 240px;
+    letter-spacing: 50px;
   }
 }
 
@@ -626,9 +633,9 @@ a:hover {
   }
   
   .infinite-scroll-text span {
-    font-size: 60px;
-    letter-spacing: 20px;
-    padding: 0 40px;
+    font-size: 180px;
+    letter-spacing: 40px;
+    padding: 0 60px;
   }
   
   /* Better iframe viewing on mobile */

@@ -30,9 +30,10 @@ export default function ProjectsPage() {
         <div style={{ marginBottom: '32px' }}>
           <h4 style={{ fontSize: '18px', marginBottom: '12px', color: '#ffffff' }}>Overview</h4>
           <p className="text-secondary" style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>
-            BibiniFarms.com represents an agricultural initiative focused on sustainable farming practices and community development. 
-            The project integrates modern agricultural techniques with traditional farming wisdom to create a scalable and 
-            sustainable food production system.
+            BibiniFarms.com is a private agricultural venture focused on sustainable farming practices and community development in Ghana. 
+            The initiative combines modern agricultural techniques with traditional farming wisdom to create scalable and 
+            sustainable food production systems. As a private enterprise, BibiniFarms operates with a focus on local impact 
+            and sustainable growth, working directly with communities to improve agricultural outcomes and food security.
           </p>
         </div>
 
