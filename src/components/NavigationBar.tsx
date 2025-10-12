@@ -67,9 +67,6 @@ export default function NavigationBar() {
               </div>
             </Link>
 
-            {/* Spacer for mobile */}
-            <div className="flex-grow md:hidden"></div>
-
             {/* Desktop Navigation - Far right */}
             <nav className="hidden md:flex items-center gap-3 ml-auto">
               {navLinks.map(({ href, label }) => (
@@ -79,7 +76,7 @@ export default function NavigationBar() {
                   className="relative overflow-hidden rounded-xl border border-transparent px-4 py-2 text-sm font-medium transition-all duration-300 hover:shadow-[0_0_20px_rgba(32,139,15,0.35)]"
                   style={{ 
                     color: '#e5e5e7',
-                    fontFamily: 'Micholate, Amazon Ember, sans-serif',
+                    fontFamily: 'Roboto, sans-serif',
                     letterSpacing: '0.8px'
                   }}
                 >
