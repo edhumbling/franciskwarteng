@@ -418,23 +418,30 @@ a:hover {
 
 .footer-content-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  gap: 48px;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 56px;
   margin-bottom: 60px;
 }
 
 @media (max-width: 1200px) {
   .footer-content-grid {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 36px;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 44px;
   }
 }
 
 @media (max-width: 768px) {
   .footer-content-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 18px;
   }
 }
 
@@ -480,10 +487,22 @@ a:hover {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: block;
 }
 
-.footer-links-list li {
-  margin-bottom: 12px;
+@media (max-width: 768px) {
+  .footer-links-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 10px;
+  }
+}
+
+.footer-links-list li { margin-bottom: 12px; }
+
+@media (max-width: 768px) {
+  .footer-links-list li { margin-bottom: 0; }
 }
 
 .footer-link-item {
@@ -582,7 +601,7 @@ a:hover {
   width: 100%;
   background: linear-gradient(180deg, rgba(0,3,6,0.9), rgba(0,3,6,1));
   border-top: 1px solid rgba(32,139,15,0.25);
-  padding: 28px 0;
+  padding: 28px clamp(20px, 4vw, 56px); /* add horizontal padding to avoid clipping */
   overflow: hidden;
 }
 
@@ -592,6 +611,7 @@ a:hover {
   display: flex;
   width: max-content;
   white-space: nowrap;
+  will-change: transform; /* smooth */
   animation: ticker-left 12s linear infinite;
 }
 
@@ -602,7 +622,7 @@ a:hover {
   line-height: 0.9;
   color: #fff;
   letter-spacing: 2px;
-  padding: 0 16px;
+  padding: 0 clamp(18px, 3.5vw, 48px); /* extra gap so seam is in whitespace */
   text-shadow: 0 0 20px rgba(32,139,15,0.25);
 }
 
