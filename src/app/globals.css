@@ -570,8 +570,8 @@ a:hover {
   padding: 80px 0;
   position: relative;
   width: 100%;
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  /* mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
 }
 
 .infinite-scroll-text {

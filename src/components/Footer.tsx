@@ -109,6 +109,27 @@ export default function Footer() {
           <span>Francis Kwarteng ;</span>
           <span>Francis Kwarteng ;</span>
           <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
+          <span>Francis Kwarteng ;</span>
         </div>
       </div>
     </>
