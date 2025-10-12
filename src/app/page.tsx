@@ -79,20 +79,16 @@ export default function Home() {
       {/* Hero Carousel */}
       <div className="hero-carousel-wrapper">
         <div className="hero-carousel-track">
-          {Array.from({ length: 2 }).map((_, dup) => (
-            <div className="hero-carousel-segment" key={dup}>
-              {heroImages.map(({ src, alt }, index) => (
-                <a
-                  key={`${dup}-${index}`}
-                  href={src}
-            target="_blank"
-            rel="noopener noreferrer"
-                  className="hero-carousel-item"
-                >
-                  <img src={src} alt={alt} loading="lazy" />
-                </a>
-              ))}
-            </div>
+          {heroImages.concat(heroImages).map(({ src, alt }, index) => (
+            <a
+              key={index}
+              href={src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-carousel-card"
+            >
+              <img src={src} alt={alt} loading="lazy" />
+            </a>
           ))}
         </div>
       </div>
