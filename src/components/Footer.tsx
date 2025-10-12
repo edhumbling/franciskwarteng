@@ -7,69 +7,75 @@ export default function Footer() {
         <div className="majestic-footer-container">
           {/* Main Footer Content */}
           <div className="footer-content-grid">
-            {/* Column 1: Brand */}
+            {/* Left Group: Brand + Explore */}
             <div className="footer-column">
-              <h3 className="footer-brand-title">Francis Kwarteng</h3>
-              <p className="footer-brand-subtitle">BS MLS (ASCPi), MS</p>
-              <p className="footer-brand-description">
-                Biomedical Scientist | NYU Langone Health
-              </p>
-              <p className="footer-brand-description" style={{ marginTop: '12px' }}>
-                Bronx, New York
-              </p>
+              {/* Brand */}
+              <div className="footer-column" style={{ marginBottom: '28px' }}>
+                <h3 className="footer-brand-title">Francis Kwarteng</h3>
+                <p className="footer-brand-subtitle">BS MLS (ASCPi), MS</p>
+                <p className="footer-brand-description">
+                  Biomedical Scientist | NYU Langone Health
+                </p>
+                <p className="footer-brand-description" style={{ marginTop: '12px' }}>
+                  Bronx, New York
+                </p>
+              </div>
+
+              {/* Explore */}
+              <div className="footer-column">
+                <h4 className="footer-column-title">Explore</h4>
+                <ul className="footer-links-list">
+                  <li><Link href="/" className="footer-link-item">Home</Link></li>
+                  <li><Link href="/about" className="footer-link-item">About</Link></li>
+                  <li><Link href="/research" className="footer-link-item">Research</Link></li>
+                  <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
+                  <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
+                  <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
+                </ul>
+              </div>
             </div>
 
-            {/* Column 2: Explore */}
+            {/* Right Group: Highlights + Connect */}
             <div className="footer-column">
-              <h4 className="footer-column-title">Explore</h4>
-              <ul className="footer-links-list">
-                <li><Link href="/" className="footer-link-item">Home</Link></li>
-                <li><Link href="/about" className="footer-link-item">About</Link></li>
-                <li><Link href="/research" className="footer-link-item">Research</Link></li>
-                <li><Link href="/projects" className="footer-link-item">Projects</Link></li>
-                <li><Link href="/essays" className="footer-link-item">Essays</Link></li>
-                <li><Link href="/contact" className="footer-link-item">Contact</Link></li>
-              </ul>
-            </div>
+              {/* Highlights */}
+              <div className="footer-column" style={{ marginBottom: '28px' }}>
+                <h4 className="footer-column-title">Highlights</h4>
+                <ul className="footer-links-list">
+                  <li><Link href="/research" className="footer-link-item">Publications</Link></li>
+                  <li><Link href="/essays" className="footer-link-item">Essays & Notes</Link></li>
+                  <li><Link href="/projects" className="footer-link-item">Bibinii Farms</Link></li>
+                </ul>
+              </div>
 
-            {/* Column 3: Highlights */}
-            <div className="footer-column">
-              <h4 className="footer-column-title">Highlights</h4>
-              <ul className="footer-links-list">
-                <li><Link href="/research" className="footer-link-item">Publications</Link></li>
-                <li><Link href="/essays" className="footer-link-item">Essays & Notes</Link></li>
-                <li><Link href="/projects" className="footer-link-item">Bibinii Farms</Link></li>
-              </ul>
-            </div>
-
-            {/* Column 4: Connect */}
-            <div className="footer-column">
-              <h4 className="footer-column-title">Connect</h4>
-              <ul className="footer-links-list">
-                <li>
-                  <a href="mailto:kwartengfo@warhawks.ulm.edu" className="footer-link-item">
-                    Email
-                  </a>
-                </li>
-                <li>
+              {/* Connect */}
+              <div className="footer-column">
+                <h4 className="footer-column-title">Connect</h4>
+                <ul className="footer-links-list">
+                  <li>
+                    <a href="mailto:kwartengfo@warhawks.ulm.edu" className="footer-link-item">
+                      Email
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="footer-link-item"
+                    >
+                      LinkedIn
+                    </a>
+                  </li>
+                </ul>
+                <div style={{ marginTop: '24px' }}>
+                  <p className="footer-contact-label">Email:</p>
                   <a 
-                    href="https://www.linkedin.com/in/franciskwarteng-8711bb1ab" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="footer-link-item"
+                    href="mailto:kwartengfo@warhawks.ulm.edu" 
+                    className="footer-contact-email"
                   >
-                    LinkedIn
+                    kwartengfo@warhawks.ulm.edu
                   </a>
-                </li>
-              </ul>
-              <div style={{ marginTop: '24px' }}>
-                <p className="footer-contact-label">Email:</p>
-                <a 
-                  href="mailto:kwartengfo@warhawks.ulm.edu" 
-                  className="footer-contact-email"
-                >
-                  kwartengfo@warhawks.ulm.edu
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -99,15 +105,9 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Innovative Dual‑Lane Glass Ticker */}
+      {/* Innovative Single‑Lane Glass Ticker (Amazon font) */}
       <div className="glass-ticker" aria-hidden="true">
         <div className="glass-ticker-lane">
-          <div className="glass-ticker-track">
-            <span>Francis Kwarteng ;</span>
-            <span>Francis Kwarteng ;</span>
-          </div>
-        </div>
-        <div className="glass-ticker-lane glass-ticker-lane--reverse">
           <div className="glass-ticker-track">
             <span>Francis Kwarteng ;</span>
             <span>Francis Kwarteng ;</span>
