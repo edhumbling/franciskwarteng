@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['@next/font'],
   },
   
@@ -116,9 +115,6 @@ const nextConfig: NextConfig = {
   
   // React strict mode
   reactStrictMode: true,
-  
-  // SWC minification
-  swcMinify: true,
   
   // Bundle analyzer (uncomment for analysis)
   // bundleAnalyzer: {

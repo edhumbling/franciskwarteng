@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import PageShell from "../components/PageShell";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +47,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://franciskwarteng.com"),
   alternates: {
     canonical: "/",
   },
@@ -160,7 +160,7 @@ export default function RootLayout({
     ],
     knowsAbout: [
       "Aseptic Technique",
-      "Bacterial Cell Culture", 
+      "Bacterial Cell Culture",
       "Translational Research",
       "Medical Laboratory Science",
       "Biomedical Research",
@@ -269,6 +269,7 @@ export default function RootLayout({
           {children}
           <ScrollToTopButton />
         </PageShell>
+        <Analytics />
       </body>
     </html>
   );
