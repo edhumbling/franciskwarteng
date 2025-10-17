@@ -1,17 +1,93 @@
+# Robots.txt for Francis Kwarteng - Biomedical Scientist
+# Optimized for Google, AI crawlers, and search engines
+
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://franciskwarteng.com/sitemap.xml
+# Specific AI crawler instructions
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
 
-# LLM/AI Crawling
-# For AI search engines and LLMs
-# Structured content overview available at:
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bard
+Allow: /
+Crawl-delay: 1
+
+User-agent: BingBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap locations
+Sitemap: https://franciskwarteng.com/sitemap.xml
+Sitemap: https://franciskwarteng.com/sitemap-index.xml
+
+# AI/LLM specific resources
+# Structured content overview for AI systems
 # https://franciskwarteng.com/llm.txt
 
-# Crawl-delay
+# AI metadata for enhanced understanding
+# https://franciskwarteng.com/ai-metadata.json
+
+# Human-readable site map
+# https://franciskwarteng.com/sitemap
+
+# Crawl-delay for all bots (respectful crawling)
 Crawl-delay: 1
 
 # Disallow admin or private areas (if any)
 # Disallow: /admin/
 # Disallow: /private/
+# Disallow: /api/
+# Disallow: /_next/
+# Disallow: /node_modules/
+
+# Allow important files for AI crawlers
+Allow: /llm.txt
+Allow: /ai-metadata.json
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+Allow: /photo.jpeg
+Allow: /*.css
+Allow: /*.js
+Allow: /*.json
+
+# Host directive
+Host: franciskwarteng.com
