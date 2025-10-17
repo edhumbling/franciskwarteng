@@ -1,6 +1,6 @@
 export default function EssaysPage() {
   return (
-    <div>
+    <div style={{ backgroundColor: "#000000", minHeight: "100vh" }}>
       <div className="amazon-section-header" style={{ marginBottom: "40px" }}>
         <h1 style={{ fontSize: "32px", marginBottom: "12px" }}>Essays & Blogs</h1>
         <p className="text-muted" style={{ fontSize: "14px", maxWidth: "800px" }}>
